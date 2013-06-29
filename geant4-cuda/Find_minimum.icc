@@ -1,0 +1,55 @@
+#ifdef CUDA
+   MAYINLINE void Find_minimum ( ResultInfo * Result_For_Current_Solid, FinalResult * Compacter_Result, int PrevSum, int size)
+#else
+   MAYINLINE void Find_minimum ( SHAREDTYPE ResultInfo * Result_For_Current_Solid, SHAREDTYPE FinalResult * Compacter_Result, int PrevSum, int size)
+#endif
+{
+	// Find minimum finds the minimum value corresponding to the trackId, and if this value is less than the value currently in Compacter_Result
+	// it stores the value.
+	// The int PrevSum is the same as the one used in the newnavigation.c's ComputeStep method. It is the sum of all elements upto and not including the current member.
+#if( GLOBAL_USAGE == 1)
+	int locationId = get_local_id(0);
+#else
+	int locationId = get_global_id(0);
+#endif
+	int i, loc ;
+	float result_step, result_safety, Current_result_step, Current_result_safety;
+	// The way the solid information is stored in the array Solids ( see NewNavigation_ComputeStep from g4NewNavigation.c )s
+	// is sequential, in the sense that the first few correspond to track 0, the next for track 1.. and so on.
+	// So we already have the information where the threads are stored to calculate the minimum.
+	// Since we already have N threads, it makes sense to treat the whole array as a collection of smaller arrays for which we calculate minimum
+	
+	// There is an overhead in terms in terms of shared mem usage, but I think we can expect a decent performance.	
+	// First basic implementation-
+
+	float Initial_result_step = (Compacter_Result [ locationId ]).step;
+		// Initially we compare with the existing step.
+	float Initial_result_safety = (Compacter_Result [ locationId ]).safety;
+
+	Current_result_step = Initial_result_step;
+	Current_result_safety = Initial_result_safety;
+	
+	for( i = 0; i < size ; i++)
+	{	
+		result_step = Result_For_Current_Solid[ PrevSum + i].step;
+		result_safety = Result_For_Current_Solid[ PrevSum + i].safety;
+		
+		if ( result_step < Current_result_step)
+		{
+			loc = PrevSum + i;
+			Current_result_step = result_step;
+		}
+		if ( result_safety < Current_result_safety)
+		{
+			Current_result_safety = result_safety;
+		}
+	}
+	
+	if( Current_result_step != Initial_result_step)
+	{
+		FinalResult final = { Current_result_safety, Current_result_step, (Result_For_Current_Solid[ loc ].PVolume)};
+		Compacter_Result[ locationId ] = final;
+	}
+
+BARRIER_FLEXIBLE;
+}

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3753/green-it/gpu-computing/Geant4/cport/benchmarks/CMS
+END
+cms.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3730/green-it/gpu-computing/Geant4/cport/benchmarks/CMS/cms.txt
+END
+parse.py
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3730/green-it/gpu-computing/Geant4/cport/benchmarks/CMS/parse.py
+END
+cms.gdml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/3637/green-it/gpu-computing/Geant4/cport/benchmarks/CMS/cms.gdml
+END
+CMSModel.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3753/green-it/gpu-computing/Geant4/cport/benchmarks/CMS/CMSModel.hpp
+END
+affinetransform.py
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/3668/green-it/gpu-computing/Geant4/cport/benchmarks/CMS/affinetransform.py
+END

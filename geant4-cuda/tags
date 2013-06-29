@@ -1,0 +1,1097 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+-DNTHREADS	Makefile	/^	-DNTHREADS=$(NTHREADS) \\$/;"	m
+BARRIER_ALL	everything.h	52;"	d
+BARRIER_ALL	everything.h	71;"	d
+BARRIER_FLEXIBLE	everything.h	54;"	d
+BARRIER_FLEXIBLE	everything.h	56;"	d
+BARRIER_FLEXIBLE	everything.h	72;"	d
+BARRIER_LOCAL	everything.h	51;"	d
+BARRIER_LOCAL	everything.h	70;"	d
+BEGIN_ENERGY_MEASUREMENT	hostcommons.hpp	43;"	d
+BEGIN_ENERGY_MEASUREMENT	hostcommons.hpp	46;"	d
+BOOSTINC	Makefile	/^BOOSTINC=-I\/home\/junaid\/Workspace\/GPU\/Geant4\/g4gpu-code$/;"	m
+BUILD_VOXELS_H	G4BuildVoxels.h	5;"	d
+BasicGeometry	geometry_common.hpp	/^	BasicGeometry( int maxsz = 0, int def_align = sizeof(G4double) )$/;"	f	class:BasicGeometry
+BasicGeometry	geometry_common.hpp	/^	BasicGeometry( void *buffer, int maxsz, int def_align = sizeof(G4double) )$/;"	f	class:BasicGeometry
+BasicGeometry	geometry_common.hpp	/^class BasicGeometry : public Geometry$/;"	c
+BlockSize	everything.h	/^CONSTTYPE int BlockSize = 32;$/;"	v
+Buffer	cl.hpp	/^	Buffer( Context &context, cl_mem_flags flags, size_t size )$/;"	f	class:CL::Buffer
+Buffer	cl.hpp	/^class Buffer$/;"	c	namespace:CL
+CHECK	geometry_common.hpp	9;"	d
+CHECK	gpuconf.h	29;"	d
+CHECKERR	cl.hpp	97;"	d
+CHECKERR	cuda.cpp	42;"	d	file:
+CHECKERR	cuda.cpp	54;"	d	file:
+CHECKERRD	cl.hpp	98;"	d
+CHECKLASTERR	cuda.cpp	52;"	d	file:
+CHECKLASTERR	cuda.cpp	56;"	d	file:
+CL	cl.hpp	/^namespace CL$/;"	n
+CL_OPTIMIZATIONS	openclmain - Working.cpp	77;"	d	file:
+CL_OPTIMIZATIONS	openclmain - Working.cpp	79;"	d	file:
+CL_OPTIMIZATIONS	openclmain.cpp	70;"	d	file:
+CL_OPTIMIZATIONS	openclmain.cpp	72;"	d	file:
+CL_VERBOSE	openclmain - Working.cpp	69;"	d	file:
+CL_VERBOSE	openclmain - Working.cpp	71;"	d	file:
+CL_VERBOSE	openclmain.cpp	62;"	d	file:
+CL_VERBOSE	openclmain.cpp	64;"	d	file:
+CL_WERROR	openclmain - Working.cpp	74;"	d	file:
+CL_WERROR	openclmain.cpp	67;"	d	file:
+CMS	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	e	enum:TestCaseBase::GeometryType
+CNULL	everything.h	126;"	d
+COMMOND	Makefile	/^	COMMOND:=$(COMMOND) -DENABLE_VOXEL_NAVIGATION$/;"	m
+COMMOND	Makefile	/^	COMMOND:=$(COMMOND) -DPHYSICS$/;"	m
+COMMOND	Makefile	/^COMMOND:=$(COMMOND) $(DEBUGFLAGS)$/;"	m
+COMPILER_FLAGS	openclmain - Working.cpp	83;"	d	file:
+COMPILER_FLAGS	openclmain.cpp	76;"	d	file:
+CONSTTYPE	everything.h	44;"	d
+CONSTTYPE	everything.h	66;"	d
+CONSTTYPE	everything.h	79;"	d
+CPUD	Makefile	/^	CPUD:=$(CPUD) -DNDEBUG -O3$/;"	m
+CPUD	Makefile	/^	CPUD:=$(CPUD) -DUSE_OPENMP -fopenmp$/;"	m
+CPUD	Makefile	/^CPUD=-DCPU_CODE -DINLINE_EVERYTHING -Wno-unused-function$/;"	m
+CUDA	everything.h	11;"	d
+CUDA	everything.h	19;"	d
+CUDAD	Makefile	/^	CUDAD:=$(CUDAD) -DSTEP_PARALLEL $(CUDPPINC)$/;"	m
+CUDAD	Makefile	/^CUDAD=-DINLINE_EVERYTHING -DCUDA_CODE # Device code$/;"	m
+CUDAL	Makefile	/^	CUDAL:=$(CUDAL) $(CUDPPLIB) -L$(CUDPPLIBDIR)$/;"	m
+CUDAL	Makefile	/^CUDAL=-L$(CUDALIBDIR) -lcudart # Host code$/;"	m
+CUDALIBDIR	Makefile	/^CUDALIBDIR=\/usr\/local\/cuda\/lib$/;"	m
+CUDPPCHECKERR	cuda.cpp	47;"	d	file:
+CUDPPCHECKERR	cuda.cpp	55;"	d	file:
+CUDPPINC	Makefile	/^CUDPPINC=-I$(SDKROOT)\/C\/common\/inc\/cudpp$/;"	m
+CUDPPLIB	Makefile	/^CUDPPLIB=-lcudpp_i386$/;"	m
+CUDPPLIBDIR	Makefile	/^CUDPPLIBDIR=$(SDKROOT)\/C\/common\/lib\/linux$/;"	m
+CameraParameters	geometry.hpp	/^	CameraParameters()$/;"	f	struct:CameraParameters
+CameraParameters	geometry.hpp	/^struct CameraParameters $/;"	s
+CheckPointer	geometry_common.hpp	/^	}CheckPointer;$/;"	t	typeref:struct:__anon32
+CommandQueue	cl.hpp	/^	CommandQueue( Context &con, cl_device_id device, cl_command_queue_properties properties = 0 )$/;"	f	class:CL::CommandQueue
+CommandQueue	cl.hpp	/^class CommandQueue$/;"	c	namespace:CL
+Context	cl.hpp	/^	Context( DeviceList &devices )$/;"	f	class:CL::Context
+Context	cl.hpp	/^class Context$/;"	c	namespace:CL
+DBL_MAX	everything.h	139;"	d
+DBL_MAX	everything.h	142;"	d
+DBL_MAX	everything.h	144;"	d
+DEBUGFLAGS	Makefile	/^	DEBUGFLAGS:=$(DEBUGFLAGS) -g -pg$/;"	m
+DEBUGFLAGS	Makefile	/^DEBUGFLAGS=$/;"	m
+DEBUGLEVEL	Makefile	/^DEBUGLEVEL=0$/;"	m
+DEG2RAD	cameraJet.c	8;"	d	file:
+DeviceList	cl.hpp	/^	DeviceList( cl_platform_id platform_id, cl_device_type deviceTypes )$/;"	f	class:CL::DeviceList
+DeviceList	cl.hpp	/^	DeviceList( cl_program program )$/;"	f	class:CL::DeviceList
+DeviceList	cl.hpp	/^class DeviceList$/;"	c	namespace:CL
+Direction	G4Navigator.h	/^   G4ThreeVector Direction;$/;"	m	struct:__anon20
+EAxis	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	t	typeref:enum:__anon7
+EInside	everything.h	/^typedef enum {kOutside,kSurface,kInside} EInside;$/;"	t	typeref:enum:__anon5
+ENABLE_COMBINED_NAVIGATION	everything.h	227;"	d
+ENABLE_G4BOX	G4VSolid_inline.c	9;"	d	file:
+ENABLE_G4CONS	G4VSolid_inline.c	15;"	d	file:
+ENABLE_G4ORB	G4VSolid_inline.c	11;"	d	file:
+ENABLE_G4TUBS	G4VSolid_inline.c	14;"	d	file:
+ENABLE_SLICED_CONS	G4Cons.h	9;"	d
+ENABLE_VOXEL_NAVIGATION	Makefile	/^ENABLE_VOXEL_NAVIGATION=1$/;"	m
+ENABLE_VOXEL_NAVIGATION	gpuconf.h	22;"	d
+ENABLE_VOXEL_NAVIGATION	openclmain - Working.cpp	43;"	d	file:
+END_ENERGY_MEASUREMENT	hostcommons.hpp	44;"	d
+END_ENERGY_MEASUREMENT	hostcommons.hpp	47;"	d
+ESolid	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	t	typeref:enum:__anon8
+EVERYTHING_H__	everything.h	5;"	d
+EVolume	everything.h	/^typedef enum {kNormal,kReplica,kParameterised} EVolume;$/;"	t	typeref:enum:__anon6
+Event	cl.hpp	/^	Event( cl_event returned ) : handle(returned) {}$/;"	f	class:CL::Event
+Event	cl.hpp	/^	Event( const Event& ev ) : handle( ev.handle )$/;"	f	class:CL::Event
+Event	cl.hpp	/^class Event$/;"	c	namespace:CL
+EventOrigin	geometry.hpp	/^struct EventOrigin$/;"	s
+Exception	cl.hpp	/^	Exception( cl_int code_, const char *file_, int line_, const char *desc_ )$/;"	f	class:CL::Exception
+Exception	cl.hpp	/^class Exception : public std::runtime_error$/;"	c	namespace:CL
+FinalResult	G4Navigator.h	/^   FinalResult;$/;"	t	typeref:struct:__anon19
+G4AFFINETRANSFORM_H	G4AffineTransform.h	7;"	d
+G4AffineTransform	G4AffineTransform.h	/^G4AffineTransform;$/;"	t	typeref:struct:__anon9
+G4AffineTransform_Inverse	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_Inverse(const G4AffineTransform *This)$/;"	f
+G4AffineTransform_InverseProduct	G4AffineTransform_inline.c	/^G4AffineTransform_InverseProduct($/;"	f
+G4AffineTransform_Invert	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_Invert(G4AffineTransform *This)$/;"	f
+G4AffineTransform_IsRotated	G4AffineTransform_inline.c	/^G4bool G4AffineTransform_IsRotated(const G4AffineTransform *This)$/;"	f
+G4AffineTransform_NetTranslation	G4AffineTransform_inline.c	/^G4ThreeVector G4AffineTransform_NetTranslation(const G4AffineTransform *This)$/;"	f
+G4AffineTransform_TransformAxis	G4AffineTransform_inline.c	/^G4ThreeVector G4AffineTransform_TransformAxis(const G4AffineTransform *This, G4ThreeVector axis)$/;"	f
+G4AffineTransform_TransformPoint	G4AffineTransform_inline.c	/^G4ThreeVector G4AffineTransform_TransformPoint(const G4AffineTransform *This, G4ThreeVector vec)$/;"	f
+G4AffineTransform_create_elements	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_elements($/;"	f
+G4AffineTransform_create_full	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_full($/;"	f
+G4AffineTransform_create_id	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_id(void)$/;"	f
+G4AffineTransform_create_matrix	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_matrix( G4RotationMatrix rot )$/;"	f
+G4AffineTransform_create_ptr	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_ptr($/;"	f
+G4AffineTransform_create_vector	G4AffineTransform_inline.c	/^G4AffineTransform G4AffineTransform_create_vector(G4ThreeVector tlate)$/;"	f
+G4AffineTransform_ctor_elements	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_elements($/;"	f
+G4AffineTransform_ctor_full	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_full($/;"	f
+G4AffineTransform_ctor_id	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_id( G4AffineTransform *This )$/;"	f
+G4AffineTransform_ctor_matrix	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_matrix( G4AffineTransform *This, G4RotationMatrix rot)$/;"	f
+G4AffineTransform_ctor_ptr	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_ptr($/;"	f
+G4AffineTransform_ctor_vector	G4AffineTransform_inline.c	/^void G4AffineTransform_ctor_vector( G4AffineTransform *This, G4ThreeVector tlate)$/;"	f
+G4AuxiliaryNavServices_CheckPointOnSurface	G4NormalNavigation.c	/^G4AuxiliaryNavServices_CheckPointOnSurface($/;"	f
+G4BOX_HH	G4Box.h	6;"	d
+G4Box	G4Box.h	/^G4Box;$/;"	t	typeref:struct:__anon10
+G4Box_ApproxSurfaceNormal	G4Box.c	/^G4ThreeVector G4Box_ApproxSurfaceNormal( GEOMETRYLOC const G4Box *This, G4ThreeVector p )$/;"	f
+G4Box_CalculateExtent	G4Box.c	/^G4bool G4Box_CalculateExtent($/;"	f
+G4Box_CreateRotatedVertices	G4Box.c	/^G4ThreeVectorList* G4Box_CreateRotatedVertices(const G4Box *This, G4AffineTransform pTransform)$/;"	f
+G4Box_DistanceToIn	G4Box.c	/^G4double G4Box_DistanceToIn(GEOMETRYLOC const G4Box *This, G4ThreeVector p)$/;"	f
+G4Box_DistanceToIn_full	G4Box.c	/^G4double G4Box_DistanceToIn_full(GEOMETRYLOC const G4Box *This, G4ThreeVector p,G4ThreeVector v)$/;"	f
+G4Box_DistanceToOut	G4Box.c	/^G4double G4Box_DistanceToOut( GEOMETRYLOC const G4Box *This, G4ThreeVector p )$/;"	f
+G4Box_DistanceToOut_full	G4Box.c	/^G4double G4Box_DistanceToOut_full( GEOMETRYLOC const G4Box *This, G4ThreeVector p,G4ThreeVector v,$/;"	f
+G4Box_Inside	G4Box.c	/^EInside G4Box_Inside(GEOMETRYLOC const G4Box *This, G4ThreeVector p)$/;"	f
+G4Box_SurfaceNormal	G4Box.c	/^G4ThreeVector G4Box_SurfaceNormal(GEOMETRYLOC const G4Box *This, G4ThreeVector p)$/;"	f
+G4Box_ctor	G4Box.c	/^void G4Box_ctor(G4Box *This,G4double pX,G4double pY,G4double pZ)$/;"	f
+G4COMBINEDNAVIGATION_C	G4CombinedNavigation.c	5;"	d	file:
+G4CombinedNavigation_ComputeStep	G4CombinedNavigation.c	/^G4CombinedNavigation_ComputeStep($/;"	f
+G4CombinedNavigation_LevelLocate	G4CombinedNavigation.c	/^G4CombinedNavigation_LevelLocate($/;"	f
+G4Cons	G4Cons.h	/^G4Cons;$/;"	t	typeref:struct:__anon12
+G4Cons_ApproxSurfaceNormal	G4Cons.c	/^G4ThreeVector G4Cons_ApproxSurfaceNormal( GEOMETRYLOC const G4Cons *This, G4ThreeVector p )$/;"	f
+G4Cons_CalculateExtent	G4Cons.c	/^G4bool G4Cons_CalculateExtent($/;"	f
+G4Cons_CheckDPhiAngle	G4Cons.c	/^INLINEFUNC void G4Cons_CheckDPhiAngle( G4Cons *This, G4double dPhi )$/;"	f
+G4Cons_CheckPhiAngles	G4Cons.c	/^INLINEFUNC void G4Cons_CheckPhiAngles( G4Cons *This, G4double sPhi, G4double dPhi )$/;"	f
+G4Cons_CheckSPhiAngle	G4Cons.c	/^INLINEFUNC void G4Cons_CheckSPhiAngle( G4Cons *This, G4double sPhi )$/;"	f
+G4Cons_CreateRotatedVertices	G4Cons.c	/^G4Cons_CreateRotatedVertices(const G4Cons *This, const G4AffineTransform* pTransform)$/;"	f
+G4Cons_DistanceToIn	G4Cons.c	/^G4double G4Cons_DistanceToIn(GEOMETRYLOC const G4Cons *This, G4ThreeVector p)$/;"	f
+G4Cons_DistanceToIn_full	G4Cons.c	/^SOLIDINLINE G4double G4Cons_DistanceToIn_full($/;"	f
+G4Cons_DistanceToOut	G4Cons.c	/^SOLIDINLINE G4double G4Cons_DistanceToOut(GEOMETRYLOC const G4Cons *This, G4ThreeVector p)$/;"	f
+G4Cons_DistanceToOut_full	G4Cons.c	/^SOLIDINLINE G4double G4Cons_DistanceToOut_full($/;"	f
+G4Cons_GetDeltaPhiAngle	G4Cons.c	/^G4double G4Cons_GetDeltaPhiAngle( const G4Cons *This )$/;"	f
+G4Cons_GetInnerRadiusMinusZ	G4Cons.c	/^G4double G4Cons_GetInnerRadiusMinusZ( const G4Cons *This )$/;"	f
+G4Cons_GetInnerRadiusPlusZ	G4Cons.c	/^G4double G4Cons_GetInnerRadiusPlusZ( const G4Cons *This )$/;"	f
+G4Cons_GetOuterRadiusMinusZ	G4Cons.c	/^G4double G4Cons_GetOuterRadiusMinusZ( const G4Cons *This )$/;"	f
+G4Cons_GetOuterRadiusPlusZ	G4Cons.c	/^G4double G4Cons_GetOuterRadiusPlusZ( const G4Cons *This )$/;"	f
+G4Cons_GetStartPhiAngle	G4Cons.c	/^G4double G4Cons_GetStartPhiAngle( const G4Cons *This )$/;"	f
+G4Cons_GetZHalfLength	G4Cons.c	/^G4double G4Cons_GetZHalfLength( const G4Cons *This )$/;"	f
+G4Cons_HH	G4Cons.h	5;"	d
+G4Cons_InitializeTrigonometry	G4Cons.c	/^void G4Cons_InitializeTrigonometry( G4Cons *This )$/;"	f
+G4Cons_Inside	G4Cons.c	/^SOLIDINLINE EInside G4Cons_Inside(GEOMETRYLOC const G4Cons *This, G4ThreeVector p)$/;"	f
+G4Cons_SurfaceNormal	G4Cons.c	/^G4ThreeVector G4Cons_SurfaceNormal(GEOMETRYLOC const G4Cons *This, G4ThreeVector p)$/;"	f
+G4Cons_ctor	G4Cons.c	/^SOLIDINLINE void G4Cons_ctor( G4Cons *This,$/;"	f
+G4LOGICALVOLUME_H	G4LogicalVolume.h	5;"	d
+G4LOGICALVOLUME_INLINE_C	G4LogicalVolume_inline.c	8;"	d	file:
+G4LogicalVolume	G4LogicalVolume.h	/^G4LogicalVolume;$/;"	t	typeref:struct:__anon13
+G4LogicalVolume_AddDaughter	G4LogicalVolume_inline.c	/^void G4LogicalVolume_AddDaughter(G4LogicalVolume* This, struct G4VPhysicalVolume* pNewDaughter)$/;"	f
+G4LogicalVolume_GetDaughter	G4LogicalVolume_inline.c	/^GEOMETRYLOC struct G4VPhysicalVolume* G4LogicalVolume_GetDaughter(GEOMETRYLOC const G4LogicalVolume* This, const G4int i)$/;"	f
+G4LogicalVolume_GetMaterial	G4LogicalVolume_inline.c	/^GEOMETRYLOC G4Material* G4LogicalVolume_GetMaterial(GEOMETRYLOC const G4LogicalVolume* This)$/;"	f
+G4LogicalVolume_GetNoDaughters	G4LogicalVolume_inline.c	/^G4int G4LogicalVolume_GetNoDaughters(GEOMETRYLOC const G4LogicalVolume* This)$/;"	f
+G4LogicalVolume_GetSolid	G4LogicalVolume_inline.c	/^GEOMETRYLOC struct G4VSolid* G4LogicalVolume_GetSolid(GEOMETRYLOC const G4LogicalVolume* This)$/;"	f
+G4LogicalVolume_GetVoxelHeader	G4LogicalVolume_inline.c	/^GEOMETRYLOC G4SmartVoxelHeader * G4LogicalVolume_GetVoxelHeader(GEOMETRYLOC const G4LogicalVolume* This)$/;"	f
+G4LogicalVolume_SetVoxelHeader	G4LogicalVolume_inline.c	/^void G4LogicalVolume_SetVoxelHeader(G4LogicalVolume* This, G4SmartVoxelHeader * pVoxel)$/;"	f
+G4LogicalVolume_ctor	G4LogicalVolume_inline.c	/^G4LogicalVolume_ctor($/;"	f
+G4LogicalVolume_dtor	G4LogicalVolume_inline.c	/^G4LogicalVolume_dtor( G4LogicalVolume *This )$/;"	f
+G4Material	stubMaterial.h	15;"	d
+G4NAVIGATIONHISTORY_H	G4NavigationHistory.h	8;"	d
+G4NAVIGATOR_H	G4Navigator.h	8;"	d
+G4NAVIGATOR_H	G4Navigator2.h	8;"	d
+G4NEWNAVIGATION_H	G4NewNavigation.h	9;"	d
+G4NavigationHistory	G4NavigationHistory.h	/^G4NavigationHistory;$/;"	t	typeref:struct:__anon15
+G4NavigationHistory_BackLevel	G4NavigationHistory_inline.c	/^void G4NavigationHistory_BackLevel( G4NavigationHistory *This )$/;"	f
+G4NavigationHistory_Clear	G4NavigationHistory_inline.c	/^void G4NavigationHistory_Clear( G4NavigationHistory *This )$/;"	f
+G4NavigationHistory_GetDepth	G4NavigationHistory_inline.c	/^G4int G4NavigationHistory_GetDepth($/;"	f
+G4NavigationHistory_GetMaxDepth	G4NavigationHistory_inline.c	/^G4int G4NavigationHistory_GetMaxDepth($/;"	f
+G4NavigationHistory_GetPtrTopTransform	G4NavigationHistory_inline.c	/^const G4AffineTransform* G4NavigationHistory_GetPtrTopTransform($/;"	f
+G4NavigationHistory_GetTopTransform	G4NavigationHistory_inline.c	/^G4AffineTransform G4NavigationHistory_GetTopTransform($/;"	f
+G4NavigationHistory_GetTopVolume	G4NavigationHistory_inline.c	/^GEOMETRYLOC G4VPhysicalVolume* G4NavigationHistory_GetTopVolume($/;"	f
+G4NavigationHistory_GetTopVolumeType	G4NavigationHistory_inline.c	/^EVolume G4NavigationHistory_GetTopVolumeType($/;"	f
+G4NavigationHistory_GetTransform	G4NavigationHistory_inline.c	/^G4NavigationHistory_GetTransform($/;"	f
+G4NavigationHistory_GetVolume	G4NavigationHistory_inline.c	/^GEOMETRYLOC G4VPhysicalVolume* G4NavigationHistory_GetVolume($/;"	f
+G4NavigationHistory_GetVolumeType	G4NavigationHistory_inline.c	/^EVolume G4NavigationHistory_GetVolumeType($/;"	f
+G4NavigationHistory_NewLevel	G4NavigationHistory_inline.c	/^void G4NavigationHistory_NewLevel($/;"	f
+G4NavigationHistory_Reset	G4NavigationHistory_inline.c	/^void G4NavigationHistory_Reset( G4NavigationHistory *This )$/;"	f
+G4NavigationHistory_SetFirstEntry	G4NavigationHistory_inline.c	/^void G4NavigationHistory_SetFirstEntry($/;"	f
+G4NavigationHistory_ctor	G4NavigationHistory_inline.c	/^void G4NavigationHistory_ctor( G4NavigationHistory *This )$/;"	f
+G4NavigationHistory_dtor	G4NavigationHistory_inline.c	/^void G4NavigationHistory_dtor( G4NavigationHistory *This )$/;"	f
+G4NavigationLevel	G4NavigationHistory.h	/^G4NavigationLevel;$/;"	t	typeref:struct:__anon14
+G4NavigationLevel_GetPhysicalVolume	G4NavigationHistory_inline.c	/^GEOMETRYLOC G4VPhysicalVolume* G4NavigationLevel_GetPhysicalVolume($/;"	f
+G4NavigationLevel_GetPtrTransform	G4NavigationHistory_inline.c	/^const G4AffineTransform* G4NavigationLevel_GetPtrTransform($/;"	f
+G4NavigationLevel_GetTransform	G4NavigationHistory_inline.c	/^G4AffineTransform G4NavigationLevel_GetTransform($/;"	f
+G4NavigationLevel_GetVolumeType	G4NavigationHistory_inline.c	/^EVolume G4NavigationLevel_GetVolumeType($/;"	f
+G4NavigationLevel_create	G4NavigationHistory_inline.c	/^G4NavigationLevel G4NavigationLevel_create($/;"	f
+G4NavigationLevel_create_relative	G4NavigationHistory_inline.c	/^G4NavigationLevel G4NavigationLevel_create_relative($/;"	f
+G4NavigationLevel_ctor	G4NavigationHistory_inline.c	/^void G4NavigationLevel_ctor($/;"	f
+G4NavigationLevel_ctor_relative	G4NavigationHistory_inline.c	/^void G4NavigationLevel_ctor_relative($/;"	f
+G4Navigator	G4Navigator.h	/^G4Navigator;$/;"	t	typeref:struct:__anon21
+G4Navigator	G4Navigator2.h	/^G4Navigator;$/;"	t	typeref:struct:__anon16
+G4Navigator_ComputeLocalAxis	G4Navigator.c	/^G4ThreeVector G4Navigator_ComputeLocalAxis( const G4Navigator *This, G4ThreeVector pVec)$/;"	f
+G4Navigator_ComputeLocalPoint	G4Navigator.c	/^G4Navigator_ComputeLocalPoint( const G4Navigator *This, G4ThreeVector pGlobalPoint)$/;"	f
+G4Navigator_ComputeStep	G4Navigator.c	/^G4double G4Navigator_ComputeStep($/;"	f
+G4Navigator_LocateGlobalPointAndSetup	G4Navigator.c	/^G4Navigator_LocateGlobalPointAndSetup($/;"	f
+G4Navigator_LocateGlobalPointWithinVolume	G4Navigator.c	/^G4Navigator_LocateGlobalPointWithinVolume( G4Navigator *This, G4ThreeVector pGlobalpoint)$/;"	f
+G4Navigator_ResetStackAndState	G4Navigator.c	/^void G4Navigator_ResetStackAndState( G4Navigator *This )$/;"	f
+G4Navigator_ResetState	G4Navigator.c	/^MAYINLINE void G4Navigator_ResetState( G4Navigator *This )$/;"	f
+G4Navigator_SetGeometricallyLimitedStep	G4Navigator.c	/^MAYINLINE void G4Navigator_SetGeometricallyLimitedStep( G4Navigator *This )$/;"	f
+G4Navigator_SetWorldVolume	G4Navigator.c	/^MAYINLINE void G4Navigator_SetWorldVolume( G4Navigator *This, GEOMETRYLOC G4VPhysicalVolume* pWorld )$/;"	f
+G4Navigator_VolumeType	G4Navigator.c	/^EVolume G4Navigator_VolumeType( const G4Navigator *This, GEOMETRYLOC const G4VPhysicalVolume *pVol )$/;"	f
+G4Navigator_ctor	G4Navigator.c	/^MAYINLINE void G4Navigator_ctor( G4Navigator *This )$/;"	f
+G4NewNavigation	G4NewNavigation.h	/^G4NewNavigation;$/;"	t	typeref:struct:__anon22
+G4NewNavigation_ComputeStep	G4NewNavigation.c	/^G4NewNavigation_ComputeStep($/;"	f
+G4NewNavigation_ComputeVoxelSafety	G4NewNavigation.c	/^G4NewNavigation_ComputeVoxelSafety($/;"	f
+G4NewNavigation_EnlargeAndResetBlist	G4NewNavigation.c	/^void G4NewNavigation_EnlargeAndResetBlist( G4NewNavigation *This, G4int n )$/;"	f
+G4NewNavigation_LevelLocate	G4NewNavigation.c	/^G4NewNavigation_LevelLocate($/;"	f
+G4NewNavigation_LocateNextVoxel	G4NewNavigation.c	/^G4NewNavigation_LocateNextVoxel($/;"	f
+G4NewNavigation_VoxelLocate	G4NewNavigation.c	/^G4NewNavigation_VoxelLocate($/;"	f
+G4NewNavigation_ctor	G4NewNavigation.c	/^void G4NewNavigation_ctor( G4NewNavigation *This )$/;"	f
+G4NodeVector	G4VoxelHeader.cpp	/^typedef std::vector<G4SmartVoxelNode*> G4NodeVector;$/;"	t	namespace:__anon27	file:
+G4NormalNavigation_ComputeStep	G4NormalNavigation.c	/^G4NormalNavigation_ComputeStep($/;"	f
+G4NormalNavigation_LevelLocate	G4NormalNavigation.c	/^G4NormalNavigation_LevelLocate($/;"	f
+G4Orb	G4Orb.h	/^G4Orb;$/;"	t	typeref:struct:__anon23
+G4Orb_CalculateExtent	G4Orb.c	/^G4bool G4Orb_CalculateExtent($/;"	f
+G4Orb_DistanceToIn	G4Orb.c	/^G4double G4Orb_DistanceToIn( GEOMETRYLOC const G4Orb *This, G4ThreeVector p)$/;"	f
+G4Orb_DistanceToIn_full	G4Orb.c	/^G4double G4Orb_DistanceToIn_full( GEOMETRYLOC const G4Orb *This, G4ThreeVector p,G4ThreeVector v)$/;"	f
+G4Orb_DistanceToOut	G4Orb.c	/^G4double G4Orb_DistanceToOut( GEOMETRYLOC const G4Orb *This, G4ThreeVector p )$/;"	f
+G4Orb_DistanceToOut_full	G4Orb.c	/^G4double G4Orb_DistanceToOut_full( GEOMETRYLOC const G4Orb *This, G4ThreeVector p,G4ThreeVector v,$/;"	f
+G4Orb_HH	G4Orb.h	8;"	d
+G4Orb_Inside	G4Orb.c	/^EInside G4Orb_Inside( GEOMETRYLOC const G4Orb *This, G4ThreeVector p)$/;"	f
+G4Orb_SurfaceNormal	G4Orb.c	/^G4ThreeVector G4Orb_SurfaceNormal( GEOMETRYLOC const G4Orb *This, G4ThreeVector p)$/;"	f
+G4Orb_ctor	G4Orb.c	/^void G4Orb_ctor( G4Orb *This,G4double pRmax )$/;"	f
+G4PolyConeCons_DistanceToOut_full	G4Cons.c	/^SOLIDINLINE G4double G4PolyConeCons_DistanceToOut_full($/;"	f
+G4PolyConeCons_Inside	G4Cons.c	/^SOLIDINLINE EInside G4PolyConeCons_Inside(GEOMETRYLOC const G4Cons *This, G4ThreeVector p, G4bool end1, G4bool end2)$/;"	f
+G4ProxyVector	G4VoxelHeader.cpp	/^typedef std::vector<G4SmartVoxelProxy*> G4ProxyVector;$/;"	t	namespace:__anon27	file:
+G4ROTATIONMATRIX_H	G4RotationMatrix.h	7;"	d
+G4RotationMatrix	G4RotationMatrix.h	/^G4RotationMatrix;$/;"	t	typeref:struct:__anon24
+G4RotationMatrix_apply	G4RotationMatrix_inline.c	/^G4ThreeVector G4RotationMatrix_apply (const G4RotationMatrix *This, G4ThreeVector p)$/;"	f
+G4RotationMatrix_create_elements	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_create_elements$/;"	f
+G4RotationMatrix_create_id	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_create_id( void )$/;"	f
+G4RotationMatrix_inverse	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_inverse(const G4RotationMatrix *This)$/;"	f
+G4RotationMatrix_invert	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_invert(G4RotationMatrix *This)$/;"	f
+G4RotationMatrix_mult	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_mult (const G4RotationMatrix *This, const G4RotationMatrix *other)$/;"	f
+G4RotationMatrix_rotateAxes	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_rotateAxes($/;"	f
+G4RotationMatrix_rotateX	G4RotationMatrix_inline.c	/^void G4RotationMatrix_rotateX(G4RotationMatrix *This, G4double a)$/;"	f
+G4RotationMatrix_rotateY	G4RotationMatrix_inline.c	/^void G4RotationMatrix_rotateY(G4RotationMatrix *This, G4double a)$/;"	f
+G4RotationMatrix_rotateZ	G4RotationMatrix_inline.c	/^void G4RotationMatrix_rotateZ(G4RotationMatrix *This, G4double a)$/;"	f
+G4RotationMatrix_transform	G4RotationMatrix_inline.c	/^G4RotationMatrix G4RotationMatrix_transform(G4RotationMatrix *This, const G4RotationMatrix *other)$/;"	f
+G4SmartVoxelHeader	G4Voxels.h	/^G4SmartVoxelHeader;$/;"	t	typeref:struct:__anon29
+G4SmartVoxelNode	G4Voxels.h	/^G4SmartVoxelNode;$/;"	t	typeref:struct:__anon30
+G4SmartVoxelNode	G4Voxels.h	/^G4SmartVoxelNode;$/;"	t	typeref:struct:__anon31
+G4SmartVoxelProxy	G4Voxels.h	/^G4SmartVoxelProxy;$/;"	t	typeref:struct:G4SmartVoxelProxy
+G4SmartVoxelProxy	G4Voxels.h	/^typedef struct G4SmartVoxelProxy$/;"	s
+G4THREEVECTOR_HH	G4ThreeVector.h	7;"	d
+G4TUBS_HH	G4Tubs.h	8;"	d
+G4ThreeVector	G4ThreeVector.h	/^G4ThreeVector;$/;"	t	typeref:struct:__anon25
+G4ThreeVectorList	G4VSolid.h	/^typedef std::vector<G4ThreeVector> G4ThreeVectorList;$/;"	t
+G4ThreeVector_coord	G4ThreeVector_inline.c	/^G4double G4ThreeVector_coord( G4ThreeVector v, EAxis axis )$/;"	f
+G4ThreeVector_create	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_create( G4double x, G4double y, G4double z )$/;"	f
+G4ThreeVector_cross	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_cross( G4ThreeVector a, G4ThreeVector p )$/;"	f
+G4ThreeVector_diff2	G4ThreeVector_inline.c	/^G4double G4ThreeVector_diff2( G4ThreeVector a, G4ThreeVector b )$/;"	f
+G4ThreeVector_dot	G4ThreeVector_inline.c	/^G4double G4ThreeVector_dot( G4ThreeVector a, G4ThreeVector b )$/;"	f
+G4ThreeVector_equal	G4ThreeVector_inline.c	/^G4bool G4ThreeVector_equal( G4ThreeVector a, G4ThreeVector b )$/;"	f
+G4ThreeVector_mag	G4ThreeVector_inline.c	/^G4double G4ThreeVector_mag( G4ThreeVector v )$/;"	f
+G4ThreeVector_mag2	G4ThreeVector_inline.c	/^G4double G4ThreeVector_mag2( G4ThreeVector v )$/;"	f
+G4ThreeVector_mult	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_mult( G4ThreeVector a, G4double m )$/;"	f
+G4ThreeVector_mult_assign	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_mult_assign( G4ThreeVector *This, G4double m )$/;"	f
+G4ThreeVector_negation	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_negation( G4ThreeVector a )$/;"	f
+G4ThreeVector_rotate	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_rotate($/;"	f
+G4ThreeVector_saxpy	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_saxpy( G4double a, G4ThreeVector x, G4ThreeVector y )$/;"	f
+G4ThreeVector_set_coord	G4ThreeVector_inline.c	/^void G4ThreeVector_set_coord( G4ThreeVector *v, EAxis axis, G4double val )$/;"	f
+G4ThreeVector_subtract	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_subtract( G4ThreeVector a, G4ThreeVector b )$/;"	f
+G4ThreeVector_subtract_assign	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_subtract_assign( G4ThreeVector *This, G4ThreeVector b )$/;"	f
+G4ThreeVector_sum	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_sum( G4ThreeVector a, G4ThreeVector b )$/;"	f
+G4ThreeVector_sum_assign	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_sum_assign( G4ThreeVector *This, G4ThreeVector b )$/;"	f
+G4ThreeVector_unit	G4ThreeVector_inline.c	/^G4ThreeVector G4ThreeVector_unit( G4ThreeVector v )$/;"	f
+G4Tubs	G4Tubs.h	/^G4Tubs;$/;"	t	typeref:struct:__anon26
+G4Tubs_ApproxSurfaceNormal	G4Tubs.c	/^G4ThreeVector G4Tubs_ApproxSurfaceNormal( GEOMETRYLOC const G4Tubs *This, G4ThreeVector p )$/;"	f
+G4Tubs_CalculateExtent	G4Tubs.c	/^G4bool G4Tubs_CalculateExtent($/;"	f
+G4Tubs_CheckDPhiAngle	G4Tubs.c	/^INLINEFUNC void G4Tubs_CheckDPhiAngle(G4Tubs *This, G4double dPhi)$/;"	f
+G4Tubs_CheckPhiAngles	G4Tubs.c	/^INLINEFUNC void G4Tubs_CheckPhiAngles(G4Tubs *This, G4double sPhi, G4double dPhi)$/;"	f
+G4Tubs_CheckSPhiAngle	G4Tubs.c	/^INLINEFUNC void G4Tubs_CheckSPhiAngle(G4Tubs *This, G4double sPhi)$/;"	f
+G4Tubs_CreateRotatedVertices	G4Tubs.c	/^G4Tubs_CreateRotatedVertices( const G4Tubs *This, G4AffineTransform *pTransform )$/;"	f
+G4Tubs_DistanceToIn	G4Tubs.c	/^SOLIDINLINE G4double G4Tubs_DistanceToIn(GEOMETRYLOC const G4Tubs *This, G4ThreeVector p)$/;"	f
+G4Tubs_DistanceToIn_full	G4Tubs.c	/^SOLIDINLINE G4double G4Tubs_DistanceToIn_full($/;"	f
+G4Tubs_DistanceToOut	G4Tubs.c	/^SOLIDINLINE G4double G4Tubs_DistanceToOut(GEOMETRYLOC const G4Tubs *This, G4ThreeVector p)$/;"	f
+G4Tubs_DistanceToOut_full	G4Tubs.c	/^SOLIDINLINE G4double G4Tubs_DistanceToOut_full($/;"	f
+G4Tubs_GetDeltaPhiAngle	G4Tubs.c	/^G4double G4Tubs_GetDeltaPhiAngle ( const G4Tubs *This )$/;"	f
+G4Tubs_GetInnerRadius	G4Tubs.c	/^G4double G4Tubs_GetInnerRadius ( const G4Tubs *This )$/;"	f
+G4Tubs_GetOuterRadius	G4Tubs.c	/^G4double G4Tubs_GetOuterRadius ( const G4Tubs *This )$/;"	f
+G4Tubs_GetStartPhiAngle	G4Tubs.c	/^G4double G4Tubs_GetStartPhiAngle ( const G4Tubs *This )$/;"	f
+G4Tubs_GetZHalfLength	G4Tubs.c	/^G4double G4Tubs_GetZHalfLength ( const G4Tubs *This )$/;"	f
+G4Tubs_InitializeTrigonometry	G4Tubs.c	/^void G4Tubs_InitializeTrigonometry( G4Tubs *This )$/;"	f
+G4Tubs_Inside	G4Tubs.c	/^SOLIDINLINE EInside G4Tubs_Inside(GEOMETRYLOC const G4Tubs *This, G4ThreeVector p)$/;"	f
+G4Tubs_SurfaceNormal	G4Tubs.c	/^SOLIDINLINE G4ThreeVector G4Tubs_SurfaceNormal(GEOMETRYLOC const G4Tubs *This, G4ThreeVector p)$/;"	f
+G4Tubs_ctor	G4Tubs.c	/^void G4Tubs_ctor( G4Tubs *This, G4double pRMin, G4double pRMax,$/;"	f
+G4VOXELHEADER_CPP	G4VoxelHeader.cpp	8;"	d	file:
+G4VOXELNAVIGATION_H	G4VoxelNavigation.h	8;"	d
+G4VOXELS_C	G4Voxels.c	10;"	d	file:
+G4VOXELS_H	G4Voxels.h	5;"	d
+G4VOXEL_LIMITS_C	G4VoxelLimits.c	8;"	d	file:
+G4VPHYSICALVOLUME_H	G4VPhysicalVolume.h	7;"	d
+G4VPhysicalVolume	G4VPhysicalVolume.h	/^G4VPhysicalVolume;$/;"	t	typeref:struct:G4VPhysicalVolume
+G4VPhysicalVolume	G4VPhysicalVolume.h	/^typedef struct G4VPhysicalVolume$/;"	s
+G4VPhysicalVolume_GetLogicalVolume	G4VPhysicalVolume_inline.c	/^GEOMETRYLOC G4LogicalVolume* G4VPhysicalVolume_GetLogicalVolume(GEOMETRYLOC const G4VPhysicalVolume *This)$/;"	f
+G4VPhysicalVolume_GetMotherLogical	G4VPhysicalVolume_inline.c	/^GEOMETRYLOC G4LogicalVolume* G4VPhysicalVolume_GetMotherLogical(GEOMETRYLOC const G4VPhysicalVolume *This)$/;"	f
+G4VPhysicalVolume_GetObjectRotationValue	G4VPhysicalVolume_inline.c	/^G4RotationMatrix G4VPhysicalVolume_GetObjectRotationValue(GEOMETRYLOC const G4VPhysicalVolume *This)$/;"	f
+G4VPhysicalVolume_GetObjectTranslation	G4VPhysicalVolume_inline.c	/^G4ThreeVector G4VPhysicalVolume_GetObjectTranslation(GEOMETRYLOC const G4VPhysicalVolume *This)$/;"	f
+G4VPhysicalVolume_GetTranslation	G4VPhysicalVolume_inline.c	/^G4ThreeVector G4VPhysicalVolume_GetTranslation(GEOMETRYLOC const G4VPhysicalVolume *This)$/;"	f
+G4VPhysicalVolume_SetLogicalVolume	G4VPhysicalVolume_inline.c	/^void G4VPhysicalVolume_SetLogicalVolume(G4VPhysicalVolume *This, G4LogicalVolume *pLogical)$/;"	f
+G4VPhysicalVolume_SetMotherLogical	G4VPhysicalVolume_inline.c	/^void G4VPhysicalVolume_SetMotherLogical(G4VPhysicalVolume *This, G4LogicalVolume *pMother)$/;"	f
+G4VPhysicalVolume_ctor	G4VPhysicalVolume_inline.c	/^void G4VPhysicalVolume_ctor($/;"	f
+G4VSOLID_C	G4VSolid.c	8;"	d	file:
+G4VSOLID_HH	G4VSolid.h	8;"	d
+G4VSOLID_INLINE_C	G4VSolid_inline.c	7;"	d	file:
+G4VSolid	G4VSolid.h	/^G4VSolid;$/;"	t	typeref:struct:G4VSolid
+G4VSolid	G4VSolid.h	/^typedef struct G4VSolid$/;"	s
+G4VSolid_CalculateClippedPolygonExtent	G4VSolid.c	/^G4VSolid_CalculateClippedPolygonExtent(G4ThreeVectorList& pPolygon,$/;"	f
+G4VSolid_CalculateExtent	G4VSolid_inline.c	/^G4bool G4VSolid_CalculateExtent($/;"	f
+G4VSolid_ClipBetweenSections	G4VSolid.c	/^MAYINLINE void G4VSolid_ClipBetweenSections(      G4ThreeVectorList* pVertices,$/;"	f
+G4VSolid_ClipCrossSection	G4VSolid.c	/^MAYINLINE void G4VSolid_ClipCrossSection(       G4ThreeVectorList* pVertices,$/;"	f
+G4VSolid_ClipPolygon	G4VSolid.c	/^MAYINLINE void G4VSolid_ClipPolygon( G4ThreeVectorList& pPolygon,$/;"	f
+G4VSolid_ClipPolygonToSimpleLimits	G4VSolid.c	/^G4VSolid_ClipPolygonToSimpleLimits( G4ThreeVectorList& pPolygon,$/;"	f
+G4VSolid_DistanceToIn	G4VSolid_inline.c	/^G4double G4VSolid_DistanceToIn(GEOMETRYLOC const G4VSolid *This, G4ThreeVector p)$/;"	f
+G4VSolid_DistanceToIn_full	G4VSolid_inline.c	/^G4double G4VSolid_DistanceToIn_full($/;"	f
+G4VSolid_DistanceToOut	G4VSolid_inline.c	/^G4double G4VSolid_DistanceToOut(GEOMETRYLOC const G4VSolid *This, G4ThreeVector p)$/;"	f
+G4VSolid_DistanceToOut_full	G4VSolid_inline.c	/^G4double G4VSolid_DistanceToOut_full($/;"	f
+G4VSolid_Inside	G4VSolid_inline.c	/^EInside G4VSolid_Inside(GEOMETRYLOC const G4VSolid *This, G4ThreeVector p)$/;"	f
+G4VSolid_SurfaceNormal	G4VSolid_inline.c	/^G4ThreeVector G4VSolid_SurfaceNormal(GEOMETRYLOC const G4VSolid *This, G4ThreeVector p)$/;"	f
+G4VolumeExtentVector	G4VoxelHeader.cpp	/^typedef std::vector<G4double> G4VolumeExtentVector;$/;"	t	namespace:__anon27	file:
+G4VolumeNosVector	G4VoxelHeader.cpp	/^typedef std::vector<G4int> G4VolumeNosVector;$/;"	t	namespace:__anon27	file:
+G4VoxelHeader_AllSlicesEqual	G4VoxelHeader.cpp	/^G4bool G4VoxelHeader_AllSlicesEqual( const G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_BuildEquivalentSliceNos	G4VoxelHeader.cpp	/^void G4VoxelHeader_BuildEquivalentSliceNos( G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_BuildNodes	G4VoxelHeader.cpp	/^G4ProxyVector* G4VoxelHeader_BuildNodes($/;"	f
+G4VoxelHeader_BuildVoxels	G4VoxelHeader.cpp	/^void G4VoxelHeader_BuildVoxels(G4SmartVoxelHeader *This, G4LogicalVolume* pVolume, G4double smartless)$/;"	f
+G4VoxelHeader_BuildVoxelsWithinLimits	G4VoxelHeader.cpp	/^G4VoxelHeader_BuildVoxelsWithinLimits($/;"	f
+G4VoxelHeader_CalculateQuality	G4VoxelHeader.cpp	/^G4double G4VoxelHeader_CalculateQuality($/;"	f
+G4VoxelHeader_CollectEquivalentHeaders	G4VoxelHeader.cpp	/^void G4VoxelHeader_CollectEquivalentHeaders( G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_CollectEquivalentNodes	G4VoxelHeader.cpp	/^void G4VoxelHeader_CollectEquivalentNodes( G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_GetAxis	G4Voxels.c	/^G4VoxelHeader_GetAxis( GEOMETRYLOC const G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_GetMaxEquivalentSliceNo	G4Voxels.c	/^G4VoxelHeader_GetMaxEquivalentSliceNo($/;"	f
+G4VoxelHeader_GetMaxExtent	G4Voxels.c	/^G4VoxelHeader_GetMaxExtent( GEOMETRYLOC const G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_GetMinEquivalentSliceNo	G4Voxels.c	/^G4VoxelHeader_GetMinEquivalentSliceNo($/;"	f
+G4VoxelHeader_GetMinExtent	G4Voxels.c	/^G4VoxelHeader_GetMinExtent( GEOMETRYLOC const G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_GetMinVoxelVolumesLevel1	G4VoxelHeader.cpp	/^int G4VoxelHeader_GetMinVoxelVolumesLevel1()$/;"	f
+G4VoxelHeader_GetMinVoxelVolumesLevel2	G4VoxelHeader.cpp	/^int G4VoxelHeader_GetMinVoxelVolumesLevel2()$/;"	f
+G4VoxelHeader_GetMinVoxelVolumesLevel3	G4VoxelHeader.cpp	/^int G4VoxelHeader_GetMinVoxelVolumesLevel3()$/;"	f
+G4VoxelHeader_GetNoSlices	G4Voxels.c	/^G4VoxelHeader_GetNoSlices( GEOMETRYLOC const G4SmartVoxelHeader *This )$/;"	f
+G4VoxelHeader_GetSlice	G4Voxels.c	/^G4VoxelHeader_GetSlice( GEOMETRYLOC const G4SmartVoxelHeader *This, G4int n )$/;"	f
+G4VoxelHeader_RefineNodes	G4VoxelHeader.cpp	/^void G4VoxelHeader_RefineNodes($/;"	f
+G4VoxelHeader_SetAxis	G4Voxels.c	/^G4VoxelHeader_SetAxis( G4SmartVoxelHeader *This, EAxis val )$/;"	f
+G4VoxelHeader_SetMaxEquivalentSliceNo	G4Voxels.c	/^G4VoxelHeader_SetMaxEquivalentSliceNo( $/;"	f
+G4VoxelHeader_SetMaxExtent	G4Voxels.c	/^G4VoxelHeader_SetMaxExtent( G4SmartVoxelHeader *This, G4double val )$/;"	f
+G4VoxelHeader_SetMinEquivalentSliceNo	G4Voxels.c	/^G4VoxelHeader_SetMinEquivalentSliceNo($/;"	f
+G4VoxelHeader_SetMinExtent	G4Voxels.c	/^G4VoxelHeader_SetMinExtent( G4SmartVoxelHeader *This, G4double val )$/;"	f
+G4VoxelHeader_SetMinVoxelLimits	G4VoxelHeader.cpp	/^void G4VoxelHeader_SetMinVoxelLimits( int lev1, int lev2, int lev3 )$/;"	f
+G4VoxelHeader_SetSlices	G4VoxelHeader.cpp	/^G4VoxelHeader_SetSlices($/;"	f
+G4VoxelHeader_ctor	G4VoxelHeader.cpp	/^G4VoxelHeader_ctor($/;"	f
+G4VoxelHeader_ctor_protected	G4VoxelHeader.cpp	/^G4VoxelHeader_ctor_protected($/;"	f
+G4VoxelHeader_dtor	G4VoxelHeader.cpp	/^G4VoxelHeader_dtor(G4SmartVoxelHeader *This)$/;"	f
+G4VoxelHeader_operator_equal	G4VoxelHeader.cpp	/^G4bool G4VoxelHeader_operator_equal($/;"	f
+G4VoxelLimits	G4BuildVoxels.h	/^G4VoxelLimits;$/;"	t	typeref:struct:__anon11
+G4VoxelLimits_AddLimit	G4VoxelLimits.c	/^void G4VoxelLimits_AddLimit($/;"	f
+G4VoxelLimits_ClipToLimits	G4VoxelLimits.c	/^G4bool G4VoxelLimits_ClipToLimits($/;"	f
+G4VoxelLimits_GetMaxExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMaxExtent(const G4VoxelLimits *This, EAxis pAxis)$/;"	f
+G4VoxelLimits_GetMaxXExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMaxXExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_GetMaxYExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMaxYExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_GetMaxZExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMaxZExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_GetMinExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMinExtent(const G4VoxelLimits *This, EAxis pAxis)$/;"	f
+G4VoxelLimits_GetMinXExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMinXExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_GetMinYExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMinYExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_GetMinZExtent	G4VoxelLimits.c	/^G4double G4VoxelLimits_GetMinZExtent( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_Inside	G4VoxelLimits.c	/^G4bool G4VoxelLimits_Inside(const G4VoxelLimits *This, G4ThreeVector pVec)$/;"	f
+G4VoxelLimits_IsLimited	G4VoxelLimits.c	/^G4bool G4VoxelLimits_IsLimited( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_IsLimited_axis	G4VoxelLimits.c	/^G4bool G4VoxelLimits_IsLimited_axis(const G4VoxelLimits *This, EAxis pAxis)$/;"	f
+G4VoxelLimits_IsXLimited	G4VoxelLimits.c	/^G4bool G4VoxelLimits_IsXLimited( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_IsYLimited	G4VoxelLimits.c	/^G4bool G4VoxelLimits_IsYLimited( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_IsZLimited	G4VoxelLimits.c	/^G4bool G4VoxelLimits_IsZLimited( const G4VoxelLimits *This )$/;"	f
+G4VoxelLimits_OutCode	G4VoxelLimits.c	/^G4int G4VoxelLimits_OutCode( const G4VoxelLimits *This, G4ThreeVector pVec )$/;"	f
+G4VoxelLimits_ctor	G4VoxelLimits.c	/^void G4VoxelLimits_ctor( G4VoxelLimits *This )$/;"	f
+G4VoxelNavigation	G4VoxelNavigation.h	/^G4VoxelNavigation;$/;"	t	typeref:struct:__anon28
+G4VoxelNavigation_ComputeStep	G4VoxelNavigation.c	/^G4VoxelNavigation_ComputeStep($/;"	f
+G4VoxelNavigation_ComputeVoxelSafety	G4VoxelNavigation.c	/^G4VoxelNavigation_ComputeVoxelSafety($/;"	f
+G4VoxelNavigation_EnlargeAndResetBlist	G4VoxelNavigation.c	/^void G4VoxelNavigation_EnlargeAndResetBlist( G4VoxelNavigation *This, G4int n )$/;"	f
+G4VoxelNavigation_LevelLocate	G4VoxelNavigation.c	/^G4VoxelNavigation_LevelLocate($/;"	f
+G4VoxelNavigation_LocateNextVoxel	G4VoxelNavigation.c	/^G4VoxelNavigation_LocateNextVoxel($/;"	f
+G4VoxelNavigation_VoxelLocate	G4VoxelNavigation.c	/^G4VoxelNavigation_VoxelLocate($/;"	f
+G4VoxelNavigation_ctor	G4VoxelNavigation.c	/^void G4VoxelNavigation_ctor( G4VoxelNavigation *This )$/;"	f
+G4VoxelNode_GetMaxEquivalentSliceNo	G4Voxels.c	/^G4VoxelNode_GetMaxEquivalentSliceNo($/;"	f
+G4VoxelNode_GetMinEquivalentSliceNo	G4Voxels.c	/^G4VoxelNode_GetMinEquivalentSliceNo($/;"	f
+G4VoxelNode_GetNoContained	G4Voxels.c	/^G4VoxelNode_GetNoContained(GEOMETRYLOC const G4SmartVoxelNode *This)$/;"	f
+G4VoxelNode_GetVolume	G4Voxels.c	/^G4VoxelNode_GetVolume($/;"	f
+G4VoxelNode_Insert	G4Voxels.c	/^void G4VoxelNode_Insert( G4SmartVoxelNode *This, G4int thing)$/;"	f
+G4VoxelNode_Insert	G4Voxels.c	/^void G4VoxelNode_Insert( G4SmartVoxelNode *This, G4int thing, int type)$/;"	f
+G4VoxelNode_SetMaxEquivalentSliceNo	G4Voxels.c	/^G4VoxelNode_SetMaxEquivalentSliceNo( $/;"	f
+G4VoxelNode_SetMinEquivalentSliceNo	G4Voxels.c	/^G4VoxelNode_SetMinEquivalentSliceNo($/;"	f
+G4VoxelNode_ctor	G4Voxels.c	/^void G4VoxelNode_ctor( GEOMETRYLOC G4SmartVoxelNode *This, G4int no )$/;"	f
+G4VoxelNode_dtor	G4Voxels.c	/^void G4VoxelNode_dtor( G4SmartVoxelNode *This )$/;"	f
+G4VoxelNode_operator_equal	G4Voxels.c	/^INLINEFUNC G4bool G4VoxelNode_operator_equal($/;"	f
+G4VoxelProxy_GetHeader	G4Voxels.c	/^G4VoxelProxy_GetHeader( GEOMETRYLOC const G4SmartVoxelProxy *This )$/;"	f
+G4VoxelProxy_GetNode	G4Voxels.c	/^G4VoxelProxy_GetNode( GEOMETRYLOC const G4SmartVoxelProxy *This )$/;"	f
+G4VoxelProxy_IsHeader	G4Voxels.c	/^G4VoxelProxy_IsHeader( GEOMETRYLOC const G4SmartVoxelProxy *This )$/;"	f
+G4VoxelProxy_IsNode	G4Voxels.c	/^G4VoxelProxy_IsNode( GEOMETRYLOC const G4SmartVoxelProxy *This )$/;"	f
+G4VoxelProxy_ctor_header	G4Voxels.c	/^void G4VoxelProxy_ctor_header( G4SmartVoxelProxy *This, G4SmartVoxelHeader *h )$/;"	f
+G4VoxelProxy_ctor_node	G4Voxels.c	/^void G4VoxelProxy_ctor_node( G4SmartVoxelProxy *This, G4SmartVoxelNode *n )$/;"	f
+G4VoxelProxy_operator_equal	G4Voxels.c	/^G4bool G4VoxelProxy_operator_equal ($/;"	f
+G4bool	everything.h	/^typedef int G4bool;$/;"	t
+G4double	everything.h	/^	typedef double G4double;$/;"	t
+G4double	everything.h	/^	typedef float G4double;$/;"	t
+G4float	everything.h	/^typedef float G4float;$/;"	t
+G4int	everything.h	/^typedef int G4int;$/;"	t
+G4long	everything.h	/^typedef long G4long;	$/;"	t
+GEOMETRYCOMMON_HPP	geometry_common.hpp	8;"	d
+GEOMETRYLOC	everything.h	220;"	d
+GEOMETRYNULL	everything.h	221;"	d
+GEOMETRY_HPP	geometry.hpp	5;"	d
+GEOMTYPE	gpuconf.h	18;"	d
+GET_cPhi	G4Cons.c	3119;"	d	file:
+GET_cPhi	G4Cons.c	9;"	d	file:
+GET_cosCPhi	G4Cons.c	14;"	d	file:
+GET_cosCPhi	G4Cons.c	23;"	d	file:
+GET_cosCPhi	G4Cons.c	3111;"	d	file:
+GET_cosEPhi	G4Cons.c	20;"	d	file:
+GET_cosEPhi	G4Cons.c	29;"	d	file:
+GET_cosEPhi	G4Cons.c	3117;"	d	file:
+GET_cosHDPhiIT	G4Cons.c	15;"	d	file:
+GET_cosHDPhiIT	G4Cons.c	24;"	d	file:
+GET_cosHDPhiIT	G4Cons.c	3112;"	d	file:
+GET_cosHDPhiOT	G4Cons.c	16;"	d	file:
+GET_cosHDPhiOT	G4Cons.c	25;"	d	file:
+GET_cosHDPhiOT	G4Cons.c	3113;"	d	file:
+GET_cosSPhi	G4Cons.c	18;"	d	file:
+GET_cosSPhi	G4Cons.c	27;"	d	file:
+GET_cosSPhi	G4Cons.c	3115;"	d	file:
+GET_ePhi	G4Cons.c	10;"	d	file:
+GET_ePhi	G4Cons.c	3120;"	d	file:
+GET_hDPhi	G4Cons.c	3118;"	d	file:
+GET_hDPhi	G4Cons.c	8;"	d	file:
+GET_sinCPhi	G4Cons.c	13;"	d	file:
+GET_sinCPhi	G4Cons.c	22;"	d	file:
+GET_sinCPhi	G4Cons.c	3110;"	d	file:
+GET_sinEPhi	G4Cons.c	19;"	d	file:
+GET_sinEPhi	G4Cons.c	28;"	d	file:
+GET_sinEPhi	G4Cons.c	3116;"	d	file:
+GET_sinSPhi	G4Cons.c	17;"	d	file:
+GET_sinSPhi	G4Cons.c	26;"	d	file:
+GET_sinSPhi	G4Cons.c	3114;"	d	file:
+GLOBALFUNC	everything.h	31;"	d
+GLOBALFUNC	everything.h	60;"	d
+GLOBALFUNC	everything.h	76;"	d
+GLOBALTYPE	everything.h	33;"	d
+GLOBALTYPE	everything.h	61;"	d
+GLOBALTYPE	everything.h	77;"	d
+GLOBAL_MODE	gpuconf.h	7;"	d
+GNULL	everything.h	123;"	d
+GNULL	everything.h	68;"	d
+GPU	everything.h	13;"	d
+GPU	everything.h	17;"	d
+GPU	everything.h	21;"	d
+GPU	everything.h	9;"	d
+GPU_CODE	everything.h	10;"	d
+GPU_CODE	everything.h	14;"	d
+GPU_REFILL_THRESHOLD	cuda.cpp	13;"	d	file:
+Geometry	geometry.hpp	/^class Geometry$/;"	c
+GeometryType	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	g	class:TestCaseBase
+HOST_CODE	everything.h	18;"	d
+HOST_CODE	everything.h	22;"	d
+HOST_CODE	everything.h	25;"	d
+HOST_COMMONS_HPP	hostcommons.hpp	5;"	d
+INLINEFUNC	everything.h	48;"	d
+INLINEFUNC	everything.h	69;"	d
+INLINEFUNC	everything.h	82;"	d
+INLINE_EVERYTHING	gpuconf.h	9;"	d
+INLINE_EVERYTHING	openclmain - Working.cpp	44;"	d	file:
+INVALID_TYPE	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	e	enum:TestCaseBase::GeometryType
+ITERATIONS_BEFORE_COMPACT	Makefile	/^ITERATIONS_BEFORE_COMPACT=100$/;"	m
+ITERATIONS_BEFORE_COMPACT	gpuconf.h	11;"	d
+ITERATIONS_BEFORE_COMPACT	openclmain - Working.cpp	46;"	d	file:
+K_GEOMETRY_ANG_TOLERANCE	everything.h	203;"	d
+K_GEOMETRY_CAR_TOLERANCE	everything.h	205;"	d
+K_GEOMETRY_CAR_TOLERANCE	everything.h	208;"	d
+K_GEOMETRY_MAX_MESH_SECTIONS	G4VSolid.h	104;"	d
+K_GEOMETRY_MESH_ANGLE_DEFAULT	G4VSolid.h	97;"	d
+K_GEOMETRY_MIN_MESH_SECTIONS	G4VSolid.h	100;"	d
+K_GEOMETRY_RAD_TOLERANCE	everything.h	206;"	d
+K_GEOMETRY_RAD_TOLERANCE	everything.h	209;"	d
+K_MAX_VOXEL_NODES	everything.h	211;"	d
+K_MAX_VOXEL_STACK_DEPTH	G4NewNavigation.h	19;"	d
+K_MAX_VOXEL_STACK_DEPTH	G4VoxelNavigation.h	18;"	d
+K_MIN_VOXEL_VOLUMES_LEVEL_1	everything.h	212;"	d
+K_MIN_VOXEL_VOLUMES_LEVEL_2	everything.h	213;"	d
+K_MIN_VOXEL_VOLUMES_LEVEL_3	everything.h	214;"	d
+K_NAVIGATION_HISTORY_DEPTH	G4NavigationHistory.h	15;"	d
+K_NAVIGATION_HISTORY_DEPTH	Makefile	/^K_NAVIGATION_HISTORY_DEPTH=16$/;"	m
+K_NAVIGATION_HISTORY_DEPTH	gpuconf.h	12;"	d
+K_NAVIGATION_HISTORY_DEPTH	openclmain - Working.cpp	47;"	d	file:
+K_NAVIGATOR_ABANDON_THRESHOLD_NOZEROSTEPS	everything.h	216;"	d
+K_NAVIGATOR_ACTION_THRESHOLD_NOZEROSTEPS	everything.h	215;"	d
+Kernel	cl.hpp	/^	Kernel( Program &p, std::string funcname )$/;"	f	class:CL::Kernel
+Kernel	cl.hpp	/^class Kernel$/;"	c	namespace:CL
+MAX	G4Orb.c	18;"	d	file:
+MAYINLINE	everything.h	97;"	d
+MAYINLINE	everything.h	99;"	d
+MEASURE_ENERGY	hostcommons.hpp	40;"	d
+MIN	G4Cons.c	834;"	d	file:
+M_PI	everything.h	115;"	d
+Multiplier	everything.h	/^CONSTTYPE int Multiplier = 4;$/;"	v
+NTHREADS	Makefile	/^NTHREADS=12$/;"	m
+NTHREADS	gpuconf.h	10;"	d
+NTHREADS	openclmain - Working.cpp	45;"	d	file:
+NULL	everything.h	120;"	d
+NULL	everything.h	67;"	d
+NoStepReduction	gpu.c	/^G4bool NoStepReduction( G4bool * noStepArray, int length )$/;"	f
+ONLY_BOX_AND_ORB	gpuconf.h	14;"	d
+OPENCL	everything.h	15;"	d
+OPENCL	everything.h	23;"	d
+OPENCLD	Makefile	/^OPENCLD= -DINLINE_EVERYTHING -DONLY_BOX_AND_ORB #-DFAST_CL_MATH$/;"	m
+OPENCLINC	Makefile	/^OPENCLINC = \/opt\/AMDAPP\/include\/$/;"	m
+OPENCLINCS	Makefile	/^OPENCLINCS=-I.\/OpenCL\/common -I$(OPENCLINC)$/;"	m
+OPENCL_CODE	gpu.c	3;"	d	file:
+OPENCL_HOST	openclmain - Working.cpp	40;"	d	file:
+OPENCL_HOST	openclmain.cpp	40;"	d	file:
+PHYSICS	Makefile	/^PHYSICS=0$/;"	m
+PHYSICS	openclmain - Working.cpp	50;"	d	file:
+PRINT_INPUT	hostcommons.hpp	13;"	d
+PRINT_OUTPUT	hostcommons.hpp	12;"	d
+PRIVATEMEM	everything.h	41;"	d
+PRIVATEMEM	everything.h	63;"	d
+PVolume	G4Navigator.h	/^   GLOBALTYPE  G4VPhysicalVolume * PVolume; $/;"	m	struct:__anon19
+PVolume	G4Navigator.h	/^   GLOBALTYPE G4VPhysicalVolume * PVolume;$/;"	m	struct:__anon18
+PVolume	G4Navigator.h	/^  GLOBALTYPE  G4VPhysicalVolume * PVolume;$/;"	m	struct:__anon17
+Particle	stubParticle.h	/^typedef ParticleWithLifetime Particle;$/;"	t
+Particle	stubParticle.h	/^typedef StubParticle Particle;$/;"	t
+ParticleWithLifetime	stubParticle.h	/^ParticleWithLifetime;$/;"	t	typeref:struct:__anon36
+Phys_vector_pointer	geometry_common.hpp	/^		G4VPhysicalVolume * Phys_vector_pointer;$/;"	m	struct:__anon32
+Pin	cl.hpp	/^	Pin( CommandQueue& queue, Buffer& buf, cl_map_flags flags )$/;"	f	class:CL::Pin
+Pin	cl.hpp	/^class Pin$/;"	c	namespace:CL
+PinnedBuffer	cl.hpp	/^	PinnedBuffer( CommandQueue& queue, size_t size,$/;"	f	class:CL::PinnedBuffer
+PinnedBuffer	cl.hpp	/^class PinnedBuffer : protected Buffer, public Pin$/;"	c	namespace:CL
+PinnedBufferPair	cl.hpp	/^	PinnedBufferPair( CommandQueue& queue, size_t size,$/;"	f	class:CL::PinnedBufferPair
+PinnedBufferPair	cl.hpp	/^class PinnedBufferPair : public PinnedBuffer$/;"	c	namespace:CL
+Point	G4Navigator.h	/^   G4ThreeVector Point;$/;"	m	struct:__anon20
+PointInformation	G4Navigator.h	/^   }PointInformation;$/;"	t	typeref:struct:__anon20
+Prefix_Sum	gpu.c	/^MAYINLINE void Prefix_Sum ( int * input, int * output, int length)$/;"	f
+Program	cl.hpp	/^	Program( Context &context, const std::string &source, const char *compilerOptions = NULL )$/;"	f	class:CL::Program
+Program	cl.hpp	/^	Program($/;"	f	class:CL::Program
+Program	cl.hpp	/^	Program() : built(false) {}$/;"	f	class:CL::Program
+Program	cl.hpp	/^class Program$/;"	c	namespace:CL
+RELOCATE	cpumain.cpp	16;"	d	file:
+RETURNOK	cuda.cpp	59;"	d	file:
+RaytracingTestCase	hostcommons.hpp	/^	RaytracingTestCase( int argc, char *argv[] )$/;"	f	class:RaytracingTestCase
+RaytracingTestCase	hostcommons.hpp	/^class RaytracingTestCase : public TestCaseBase$/;"	c
+ResultInfo	G4Navigator.h	/^   }ResultInfo;$/;"	t	typeref:struct:__anon18
+SDKROOT	Makefile	/^SDKROOT=$(WHICHHOME)\/NVIDIA_GPU_Computing_SDK$/;"	m
+SHAREDMEM	everything.h	42;"	d
+SHAREDMEM	everything.h	64;"	d
+SHAREDSHADOW	everything.h	43;"	d
+SHAREDSHADOW	everything.h	65;"	d
+SHAREDTYPE	everything.h	36;"	d
+SHAREDTYPE	everything.h	38;"	d
+SHAREDTYPE	everything.h	62;"	d
+SHAREDTYPE	everything.h	78;"	d
+SOLIDINLINE	G4VSolid.h	13;"	d
+SPHERES	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	e	enum:TestCaseBase::GeometryType
+SQ	G4Cons.c	2288;"	d	file:
+STEP_PARALLEL	Makefile	/^STEP_PARALLEL=0$/;"	m
+SimplePhysicsTestCase	hostcommons.hpp	/^	SimplePhysicsTestCase( int argc, char *argv[] )$/;"	f	class:SimplePhysicsTestCase
+SimplePhysicsTestCase	hostcommons.hpp	/^class SimplePhysicsTestCase : public TestCaseBase$/;"	c
+SingleBinarySingleGPUSetup	cl.hpp	/^	SingleBinarySingleGPUSetup($/;"	f	class:CL::SingleBinarySingleGPUSetup
+SingleBinarySingleGPUSetup	cl.hpp	/^class SingleBinarySingleGPUSetup : public SingleFileSingleGPUSetup$/;"	c	namespace:CL
+SingleFileSingleGPUSetup	cl.hpp	/^	SingleFileSingleGPUSetup($/;"	f	class:CL::SingleFileSingleGPUSetup
+SingleFileSingleGPUSetup	cl.hpp	/^class SingleFileSingleGPUSetup$/;"	c	namespace:CL
+SingleGPUSetup	cl.hpp	/^	SingleGPUSetup()$/;"	f	class:CL::SingleGPUSetup
+SingleGPUSetup	cl.hpp	/^class SingleGPUSetup$/;"	c	namespace:CL
+SingleSourceSingleGPUSetup	cl.hpp	/^	SingleSourceSingleGPUSetup($/;"	f	class:CL::SingleSourceSingleGPUSetup
+SingleSourceSingleGPUSetup	cl.hpp	/^class SingleSourceSingleGPUSetup : public SingleFileSingleGPUSetup$/;"	c	namespace:CL
+SolidInfo	G4Navigator.h	/^  }SolidInfo;$/;"	t	typeref:struct:__anon17
+SolidType	G4Voxels.h	/^	G4int SolidType[ Solidcount ];$/;"	m	struct:__anon31
+Solidcount	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+StrayPointer	geometry_common.hpp	/^	StrayPointer;$/;"	t	class:BasicGeometry	typeref:struct:BasicGeometry::__anon33
+StubMaterial	stubMaterial.h	/^StubMaterial;$/;"	t	typeref:struct:__anon34
+StubParticle	stubParticle.h	/^StubParticle;$/;"	t	typeref:struct:__anon35
+THREEVECTOR_EXTRAMEMBER	G4ThreeVector.h	12;"	d
+TOY1	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	e	enum:TestCaseBase::GeometryType
+TOY2	hostcommons.hpp	/^	enum GeometryType { INVALID_TYPE, TOY1, TOY2, SPHERES, CMS };$/;"	e	enum:TestCaseBase::GeometryType
+TestCase	hostcommons.hpp	/^typedef RaytracingTestCase TestCase;$/;"	t
+TestCase	hostcommons.hpp	/^typedef SimplePhysicsTestCase TestCase;$/;"	t
+TestCaseBase	hostcommons.hpp	/^	TestCaseBase( int argc, char *argv[] )$/;"	f	class:TestCaseBase
+TestCaseBase	hostcommons.hpp	/^class TestCaseBase$/;"	c
+USE_BLIST	G4NewNavigation.h	15;"	d
+USE_BLIST	G4VoxelNavigation.h	14;"	d
+VERBOSE	gpuconf.h	13;"	d
+VERBOSE	openclmain - Working.cpp	48;"	d	file:
+VolumeStore	geometry_common.hpp	/^	std::vector <CheckPointer>  VolumeStore;$/;"	m	class:BasicGeometry
+WARP_SIZE	cuda.cpp	/^const int WARP_SIZE = 32;$/;"	v
+WHICHHOME	Makefile	/^WHICHHOME=$(HOME)$/;"	m
+_STDLIB_H	cuda.cpp	8;"	d	file:
+__CL_HPP__	cl.hpp	3;"	d
+__NO_CL_H__	nocl.h	2;"	d
+__STUBMATERIAL_HH__	stubMaterial.h	5;"	d
+__STUBPARTICLE_HH__	stubParticle.h	5;"	d
+__UTILS_HPP__	myutils.h	3;"	d
+__UTILS_HPP__	utils.h	3;"	d
+addLogicalVolumeDaughter	geometry_common.hpp	/^	void addLogicalVolumeDaughter( G4LogicalVolume *vol, G4VPhysicalVolume *d )$/;"	f	class:BasicGeometry
+addLogicalVolumePointers	geometry_common.hpp	/^	void addLogicalVolumePointers( G4LogicalVolume *vol )$/;"	f	class:BasicGeometry
+addPhysicalVolumePointers	geometry_common.hpp	/^	void addPhysicalVolumePointers( G4VPhysicalVolume *vol )$/;"	f	class:BasicGeometry
+addPointer	geometry_common.hpp	/^	template <class T> void addPointer( T *& ptr )$/;"	f	class:BasicGeometry
+addPolyConePointers	geometry_common.hpp	/^	void addPolyConePointers( G4PolyCone *polycone )$/;"	f	class:BasicGeometry
+addThing	geometry_common.hpp	/^	template <class T> T* addThing( const T &thing )$/;"	f	class:BasicGeometry
+addThing	geometry_common.hpp	/^	void *addThing( const void *thing, int thingsz )$/;"	f	class:BasicGeometry
+addThingAligned	geometry_common.hpp	/^	template <class T> T* addThingAligned( const T &thing, int alignment = sizeof(T) )$/;"	f	class:BasicGeometry
+addThingAligned	geometry_common.hpp	/^	void *addThingAligned( const void *thing, int thingsz, int alignment )$/;"	f	class:BasicGeometry
+addThingUnaligned	geometry_common.hpp	/^	template <class T> T* addThingUnaligned( const T &thing )$/;"	f	class:BasicGeometry
+addThingUnaligned	geometry_common.hpp	/^	void *addThingUnaligned( const void *thing, int thingsz )$/;"	f	class:BasicGeometry
+align	G4LogicalVolume.h	/^	int align;$/;"	m	struct:__anon13
+align	G4NavigationHistory.h	/^	int align;$/;"	m	struct:__anon15
+align	G4Orb.h	/^	G4double align;$/;"	m	struct:__anon23
+align	G4RotationMatrix.h	/^	G4double align;$/;"	m	struct:__anon24
+align	G4VSolid.h	/^	int align;$/;"	m	struct:G4VSolid
+align1	G4Cons.h	/^     int align1;$/;"	m	struct:__anon12
+align1	G4Navigator.h	/^	int align1;$/;"	m	struct:__anon21
+align1	G4Navigator2.h	/^	int align1;$/;"	m	struct:__anon16
+align1	G4Tubs.h	/^     int align1;$/;"	m	struct:__anon26
+arch	Makefile	/^	nvcc -c -arch=sm_20 -Xptxas -dlcm=ca prog.cu -DNDEBUG $(DEBUGFLAGS)$/;"	m
+attenuationPerDensity	hostcommons.hpp	/^	double attenuationPerDensity;$/;"	m	class:SimplePhysicsTestCase
+bool	everything.h	/^	typedef int bool;$/;"	t
+buf	geometry_common.hpp	/^	void *buf;$/;"	m	class:BasicGeometry
+buffer	cl.hpp	/^	Buffer& buffer;$/;"	m	class:CL::Pin
+bufsz	geometry_common.hpp	/^	int bufsz, maxbufsz;$/;"	m	class:BasicGeometry
+buildFromBinaries	cl.hpp	/^	void buildFromBinaries( $/;"	f	class:CL::Program
+buildFromSource	cl.hpp	/^	void buildFromSource($/;"	f	class:CL::Program
+buildProgram	cl.hpp	/^	void buildProgram( const char *compilerOptions )$/;"	f	class:CL::Program
+built	cl.hpp	/^	bool built;$/;"	m	class:CL::Program
+byte	geometry.hpp	/^	typedef unsigned char byte;$/;"	t	class:Geometry
+ceilDiv	cuda.cpp	/^static inline int ceilDiv( int a, int d )$/;"	f	file:
+check	G4LogicalVolume.h	/^	  int check;$/;"	m	struct:__anon13
+check	gpu.c	/^GLOBALFUNC void check( GLOBALTYPE  G4VPhysicalVolume *worldVolumeAndGeomBuffer, GLOBALTYPE unsigned long * result)$/;"	f
+check_navigation	openclmain.cpp	/^void check_navigation( void * pointer, std::vector<CheckPointer> check_pointer, int number_of_increments)$/;"	f
+checkerr	cl.hpp	/^	static void checkerr( cl_int errcode, const char *file, int line, const char *desc = NULL )$/;"	f	class:CL::Exception
+checkerr	cudamain.cpp	/^static void checkerr( my_cuda_err ret )$/;"	f	file:
+checkgeom	gpu.c	/^GLOBALFUNC void checkgeom( GLOBALTYPE  G4VPhysicalVolume *worldVolumeAndGeomBuffer, GLOBALTYPE int * result, int number_of_increments)$/;"	f
+cl_double	nocl.h	/^typedef double cl_double;$/;"	t
+cl_float	nocl.h	/^typedef float cl_float;$/;"	t
+cl_int	nocl.h	/^typedef int cl_int;$/;"	t
+cl_uint	nocl.h	/^typedef unsigned cl_uint;$/;"	t
+code	cl.hpp	/^	cl_int code;$/;"	m	class:CL::Exception
+com	cl.hpp	/^	CommandQueue& com;$/;"	m	class:CL::Pin
+compareBuffers	myutils.h	/^static bool compareBuffers( const ConA& a, const ConB& b )$/;"	f
+compareBuffers	utils.h	/^static bool compareBuffers( const ConA& a, const ConB& b )$/;"	f
+context	cl.hpp	/^	Context &context;$/;"	m	class:CL::CommandQueue
+cosCPhi	G4Cons.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon12
+cosCPhi	G4Tubs.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon26
+cosEPhi	G4Cons.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon12
+cosEPhi	G4Tubs.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon26
+cosHDPhiIT	G4Cons.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon12
+cosHDPhiIT	G4Tubs.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon26
+cosHDPhiOT	G4Cons.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon12
+cosHDPhiOT	G4Tubs.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon26
+cosSPhi	G4Cons.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon12
+cosSPhi	G4Tubs.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon26
+count	G4VPhysicalVolume.h	/^	int count;$/;"	m	struct:G4VPhysicalVolume
+counter	G4VPhysicalVolume.h	/^	static int counter;$/;"	m	struct:G4VPhysicalVolume
+counter	G4VPhysicalVolume.h	/^int G4VPhysicalVolume::counter = 0;$/;"	m	class:G4VPhysicalVolume
+counter_shadow	G4VPhysicalVolume.h	/^	int counter_shadow;\/\/ NOTE: This is not used. Exists only to keep sizes on GPU and CPU consistent.$/;"	m	struct:G4VPhysicalVolume
+cpuexec	cpuexec.c	/^void cpuexec($/;"	f
+create	geometry_common.hpp	/^	void create()$/;"	f	class:BasicGeometry
+createCameraJet	cameraJet.c	/^void createCameraJet( StubParticle *container, int xres, int yres, CameraParameters params )$/;"	f
+createGrid	cuda.cpp	/^void createGrid( int numInput, dim3* grid, dim3* block )$/;"	f
+createVoxels	geometry_common.hpp	/^	void createVoxels( G4LogicalVolume *mother, G4double smartless = kInfinity )$/;"	f	class:BasicGeometry
+create_called	geometry_common.hpp	/^	bool create_called;$/;"	m	class:BasicGeometry
+cudaexec	cuda.cpp	/^my_cuda_err cudaexec( G4double phys_step, int totalInput, Particle *input, G4double *output )$/;"	f
+cudafinish	cuda.cpp	/^my_cuda_err cudafinish()$/;"	f
+cudainit	cuda.cpp	/^my_cuda_err cudainit( Geometry *geom, int N )$/;"	f
+default_alignment	geometry_common.hpp	/^	int default_alignment;$/;"	m	class:BasicGeometry
+desc	cl.hpp	/^	const char *desc;$/;"	m	class:CL::Exception
+destoffs	geometry_common.hpp	/^		unsigned long destoffs;$/;"	m	struct:BasicGeometry::__anon33
+deviceBuffer	cl.hpp	/^	Buffer deviceBuffer;$/;"	m	class:CL::PinnedBufferPair
+devices	cl.hpp	/^	cl_device_id *devices;$/;"	m	class:CL::DeviceList
+dir	stubParticle.h	/^	G4ThreeVector pos, dir;$/;"	m	struct:__anon35
+dir	stubParticle.h	/^	G4ThreeVector pos, dir;$/;"	m	struct:__anon36
+dist	geometry.hpp	/^		dist,$/;"	m	struct:CameraParameters
+doStep	gpu2.c	/^GLOBALFUNC void doStep($/;"	f
+enqueueBarrier	cl.hpp	/^	void enqueueBarrier()$/;"	f	class:CL::CommandQueue
+enqueueKernel	cl.hpp	/^	Event enqueueKernel( Kernel& kernel, size_t work_size, size_t block_size = 0,$/;"	f	class:CL::CommandQueue
+enqueueMapBuffer	cl.hpp	/^	void *enqueueMapBuffer( Buffer& buffer, cl_map_flags flags, cl_bool blocking = CL_TRUE, cl_event *event = NULL,$/;"	f	class:CL::CommandQueue
+enqueueMarker	cl.hpp	/^	Event enqueueMarker()$/;"	f	class:CL::CommandQueue
+enqueueNDRangeKernel	cl.hpp	/^	Event enqueueNDRangeKernel( Kernel& kernel, cl_uint work_dim,$/;"	f	class:CL::CommandQueue
+enqueueReadBuffer	cl.hpp	/^	Event enqueueReadBuffer( Buffer& buffer, void *host_buffer, cl_bool blocking = CL_TRUE,$/;"	f	class:CL::CommandQueue
+enqueueTask	cl.hpp	/^	Event enqueueTask( Kernel& kernel, cl_uint waitListSz = 0, const cl_event *waitList = NULL )$/;"	f	class:CL::CommandQueue
+enqueueUnmapBuffer	cl.hpp	/^	Event enqueueUnmapBuffer( Buffer& buffer, void* hostptr,$/;"	f	class:CL::CommandQueue
+enqueueWaitForEvents	cl.hpp	/^	void enqueueWaitForEvents( cl_uint numEvents, const cl_event * eventList )$/;"	f	class:CL::CommandQueue
+enqueueWriteBuffer	cl.hpp	/^	Event enqueueWriteBuffer( Buffer& buffer, const void *host_buffer, cl_bool blocking = CL_TRUE,$/;"	f	class:CL::CommandQueue
+err	cuda.cpp	/^typedef struct { const char *err, *fn; int line, errcode; } my_cuda_err;$/;"	m	struct:__anon1	file:
+err	cudamain.cpp	/^typedef struct { const char *err, *fn; int line, errc; } my_cuda_err;$/;"	m	struct:__anon3	file:
+errc	cudamain.cpp	/^typedef struct { const char *err, *fn; int line, errc; } my_cuda_err;$/;"	m	struct:__anon3	file:
+errcode	cuda.cpp	/^typedef struct { const char *err, *fn; int line, errcode; } my_cuda_err;$/;"	m	struct:__anon1	file:
+fBlist	G4NewNavigation.h	/^	char *fBlist;$/;"	m	struct:__anon22
+fBlist	G4VoxelNavigation.h	/^	char *fBlist;$/;"	m	struct:__anon28
+fBlistSz	G4NewNavigation.h	/^	int fBlistSz;$/;"	m	struct:__anon22
+fBlistSz	G4VoxelNavigation.h	/^	int fBlistSz;$/;"	m	struct:__anon28
+fBlockedPhysicalVolume	G4Navigator.h	/^	GEOMETRYLOC G4VPhysicalVolume *fBlockedPhysicalVolume;$/;"	m	struct:__anon21
+fBlockedPhysicalVolume	G4Navigator2.h	/^	GEOMETRYLOC G4VPhysicalVolume *fBlockedPhysicalVolume;$/;"	m	struct:__anon16
+fDPhi	G4Cons.h	/^    G4double fSPhi, fDPhi;$/;"	m	struct:__anon12
+fDPhi	G4Tubs.h	/^	G4double fSPhi, fDPhi;$/;"	m	struct:__anon26
+fDaughters	G4LogicalVolume.h	/^	GEOMETRYLOC struct G4VPhysicalVolume * GEOMETRYLOC *fDaughters;$/;"	m	struct:__anon13	typeref:struct:__anon13::GEOMETRYLOC
+fDx	G4Box.h	/^    G4double fDx,fDy,fDz;$/;"	m	struct:__anon10
+fDy	G4Box.h	/^    G4double fDx,fDy,fDz;$/;"	m	struct:__anon10
+fDz	G4Box.h	/^    G4double fDx,fDy,fDz;$/;"	m	struct:__anon10
+fDz	G4Cons.h	/^    G4double fRmin1, fRmin2, fRmax1, fRmax2, fDz;$/;"	m	struct:__anon12
+fDz	G4Tubs.h	/^    G4double fRMin, fRMax, fDz;$/;"	m	struct:__anon26
+fEnteredDaughter	G4Navigator.h	/^	G4bool fEnteredDaughter;$/;"	m	struct:__anon21
+fEnteredDaughter	G4Navigator2.h	/^	G4bool fEnteredDaughter;$/;"	m	struct:__anon16
+fEntering	G4Navigator.h	/^	G4bool fEntering;$/;"	m	struct:__anon21
+fEntering	G4Navigator2.h	/^	G4bool fEntering;$/;"	m	struct:__anon16
+fEpsilon	G4Orb.c	/^static const G4double fEpsilon = 2.e-11;  \/\/ relative tolerance of fRmax$/;"	v	file:
+fExitNormal	G4Navigator.h	/^	G4ThreeVector fExitNormal;  \/\/ Leaving volume normal, in the$/;"	m	struct:__anon21
+fExitNormal	G4Navigator2.h	/^	G4ThreeVector fExitNormal;  \/\/ Leaving volume normal, in the$/;"	m	struct:__anon16
+fExitedMother	G4Navigator.h	/^	G4bool fExitedMother;$/;"	m	struct:__anon21
+fExitedMother	G4Navigator2.h	/^	G4bool fExitedMother;$/;"	m	struct:__anon16
+fExiting	G4Navigator.h	/^	G4bool fExiting;$/;"	m	struct:__anon21
+fExiting	G4Navigator2.h	/^	G4bool fExiting;$/;"	m	struct:__anon16
+fGrandMotherExitNormal	G4Navigator.h	/^	G4ThreeVector fGrandMotherExitNormal;  \/\/ Leaving volume normal, in its $/;"	m	struct:__anon21
+fGrandMotherExitNormal	G4Navigator2.h	/^	G4ThreeVector fGrandMotherExitNormal;  \/\/ Leaving volume normal, in its $/;"	m	struct:__anon16
+fHeader	G4Voxels.h	/^	GEOMETRYLOC G4SmartVoxelHeader* fHeader;$/;"	m	struct:G4SmartVoxelProxy
+fHistory	G4Navigator.h	/^	G4NavigationHistory fHistory;$/;"	m	struct:__anon21
+fHistory	G4Navigator2.h	/^	G4NavigationHistory fHistory;$/;"	m	struct:__anon16
+fLastLocatedPointLocal	G4Navigator.h	/^	G4ThreeVector fLastLocatedPointLocal;$/;"	m	struct:__anon21
+fLastLocatedPointLocal	G4Navigator2.h	/^	G4ThreeVector fLastLocatedPointLocal;$/;"	m	struct:__anon16
+fLastStepWasZero	G4Navigator.h	/^	G4bool fLastStepWasZero;$/;"	m	struct:__anon21
+fLastStepWasZero	G4Navigator2.h	/^	G4bool fLastStepWasZero;$/;"	m	struct:__anon16
+fLocatedOnEdge	G4Navigator.h	/^	G4bool fLocatedOnEdge;       $/;"	m	struct:__anon21
+fLocatedOnEdge	G4Navigator2.h	/^	G4bool fLocatedOnEdge;       $/;"	m	struct:__anon16
+fLocatedOutsideWorld	G4Navigator.h	/^	G4bool fLocatedOutsideWorld;$/;"	m	struct:__anon21
+fLocatedOutsideWorld	G4Navigator2.h	/^	G4bool fLocatedOutsideWorld;$/;"	m	struct:__anon16
+fMaterial	G4LogicalVolume.h	/^	  GEOMETRYLOC G4Material* fMaterial;$/;"	m	struct:__anon13
+fNavHistory	G4NavigationHistory.h	/^	G4NavigationLevel fNavHistory[K_NAVIGATION_HISTORY_DEPTH];$/;"	m	struct:__anon15
+fNoDaughters	G4LogicalVolume.h	/^	G4int fNoDaughters;$/;"	m	struct:__anon13
+fNode	G4Voxels.h	/^    GEOMETRYLOC G4SmartVoxelNode* fNode;$/;"	m	struct:G4SmartVoxelProxy
+fNumContents	G4Voxels.h	/^	G4int fNumContents;$/;"	m	struct:__anon30
+fNumContents	G4Voxels.h	/^	G4int fNumContents;$/;"	m	struct:__anon31
+fNumSlices	G4Voxels.h	/^	G4int fNumSlices;$/;"	m	struct:__anon29
+fNumberZeroSteps	G4Navigator.h	/^	G4int fNumberZeroSteps;$/;"	m	struct:__anon21
+fNumberZeroSteps	G4Navigator2.h	/^	G4int fNumberZeroSteps;$/;"	m	struct:__anon16
+fPhiFullCone	G4Cons.h	/^    G4bool fPhiFullCone;$/;"	m	struct:__anon12
+fPhiFullTube	G4Tubs.h	/^    G4bool fPhiFullTube;$/;"	m	struct:__anon26
+fPhysicalVolumePtr	G4NavigationHistory.h	/^   GEOMETRYLOC G4VPhysicalVolume* fPhysicalVolumePtr;$/;"	m	struct:__anon14
+fPreviousSafety	G4Navigator.h	/^	G4double       fPreviousSafety; $/;"	m	struct:__anon21
+fPreviousSafety	G4Navigator2.h	/^	G4double       fPreviousSafety; $/;"	m	struct:__anon16
+fPushed	G4Navigator.h	/^	G4bool fPushed;$/;"	m	struct:__anon21
+fPushed	G4Navigator2.h	/^	G4bool fPushed;$/;"	m	struct:__anon16
+fRMax	G4Tubs.h	/^    G4double fRMin, fRMax, fDz;$/;"	m	struct:__anon26
+fRMin	G4Tubs.h	/^    G4double fRMin, fRMax, fDz;$/;"	m	struct:__anon26
+fRmax	G4Orb.h	/^    G4double fRmax;$/;"	m	struct:__anon23
+fRmax1	G4Cons.h	/^    G4double fRmin1, fRmin2, fRmax1, fRmax2, fDz;$/;"	m	struct:__anon12
+fRmax2	G4Cons.h	/^    G4double fRmin1, fRmin2, fRmax1, fRmax2, fDz;$/;"	m	struct:__anon12
+fRmaxTolerance	G4Orb.h	/^    G4double fRmaxTolerance;$/;"	m	struct:__anon23
+fRmin1	G4Cons.h	/^    G4double fRmin1, fRmin2, fRmax1, fRmax2, fDz;$/;"	m	struct:__anon12
+fRmin2	G4Cons.h	/^    G4double fRmin1, fRmin2, fRmax1, fRmax2, fDz;$/;"	m	struct:__anon12
+fSPhi	G4Cons.h	/^    G4double fSPhi, fDPhi;$/;"	m	struct:__anon12
+fSPhi	G4Tubs.h	/^	G4double fSPhi, fDPhi;$/;"	m	struct:__anon26
+fSolid	G4LogicalVolume.h	/^	GEOMETRYLOC struct G4VSolid* fSolid;$/;"	m	struct:__anon13	typeref:struct:__anon13::G4VSolid
+fStackDepth	G4NavigationHistory.h	/^	G4int fStackDepth;$/;"	m	struct:__anon15
+fStepEndPoint	G4Navigator.h	/^	G4ThreeVector fStepEndPoint;$/;"	m	struct:__anon21
+fStepEndPoint	G4Navigator2.h	/^	G4ThreeVector fStepEndPoint;$/;"	m	struct:__anon16
+fTopPhysical	G4Navigator.h	/^	GEOMETRYLOC G4VPhysicalVolume  *fTopPhysical;$/;"	m	struct:__anon21
+fTopPhysical	G4Navigator2.h	/^	GEOMETRYLOC G4VPhysicalVolume  *fTopPhysical;$/;"	m	struct:__anon16
+fTransform	G4NavigationHistory.h	/^   G4AffineTransform  fTransform;$/;"	m	struct:__anon14
+fValidExitNormal	G4Navigator.h	/^	G4bool fValidExitNormal;    \/\/ Set true if have leaving volume normal$/;"	m	struct:__anon21
+fValidExitNormal	G4Navigator2.h	/^	G4bool fValidExitNormal;    \/\/ Set true if have leaving volume normal$/;"	m	struct:__anon16
+fVolumeType	G4NavigationHistory.h	/^   EVolume fVolumeType;$/;"	m	struct:__anon14
+fVoxel	G4LogicalVolume.h	/^	GEOMETRYLOC G4SmartVoxelHeader *fVoxel;$/;"	m	struct:__anon13
+fVoxelAxisStack	G4NewNavigation.h	/^	EAxis fVoxelAxisStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon22
+fVoxelAxisStack	G4VoxelNavigation.h	/^	EAxis fVoxelAxisStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon28
+fVoxelDepth	G4NewNavigation.h	/^	G4int fVoxelDepth;$/;"	m	struct:__anon22
+fVoxelDepth	G4VoxelNavigation.h	/^	G4int fVoxelDepth;$/;"	m	struct:__anon28
+fVoxelHeaderStack	G4NewNavigation.h	/^	GEOMETRYLOC G4SmartVoxelHeader* fVoxelHeaderStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon22
+fVoxelHeaderStack	G4VoxelNavigation.h	/^	GEOMETRYLOC G4SmartVoxelHeader* fVoxelHeaderStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon28
+fVoxelNav	G4Navigator.h	/^	G4NewNavigation fVoxelNav;$/;"	m	struct:__anon21
+fVoxelNav	G4Navigator.h	/^	G4VoxelNavigation fVoxelNav;$/;"	m	struct:__anon21
+fVoxelNav	G4Navigator2.h	/^	G4VoxelNavigation fVoxelNav;$/;"	m	struct:__anon16
+fVoxelNoSlicesStack	G4NewNavigation.h	/^	G4int fVoxelNoSlicesStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon22
+fVoxelNoSlicesStack	G4VoxelNavigation.h	/^	G4int fVoxelNoSlicesStack[K_MAX_VOXEL_STACK_DEPTH];$/;"	m	struct:__anon28
+fVoxelNode	G4NewNavigation.h	/^	GEOMETRYLOC G4SmartVoxelNode *fVoxelNode;$/;"	m	struct:__anon22
+fVoxelNode	G4VoxelNavigation.h	/^	GEOMETRYLOC G4SmartVoxelNode *fVoxelNode;$/;"	m	struct:__anon28
+fVoxelNodeNoStack	G4NewNavigation.h	/^	G4int fVoxelNodeNoStack[K_MAX_VOXEL_STACK_DEPTH];    $/;"	m	struct:__anon22
+fVoxelNodeNoStack	G4VoxelNavigation.h	/^	G4int fVoxelNodeNoStack[K_MAX_VOXEL_STACK_DEPTH];    $/;"	m	struct:__anon28
+fVoxelSliceWidthStack	G4NewNavigation.h	/^	G4double fVoxelSliceWidthStack[K_MAX_VOXEL_STACK_DEPTH]; $/;"	m	struct:__anon22
+fVoxelSliceWidthStack	G4VoxelNavigation.h	/^	G4double fVoxelSliceWidthStack[K_MAX_VOXEL_STACK_DEPTH]; $/;"	m	struct:__anon28
+fWasLimitedByGeometry	G4Navigator.h	/^	G4bool fWasLimitedByGeometry;$/;"	m	struct:__anon21
+fWasLimitedByGeometry	G4Navigator2.h	/^	G4bool fWasLimitedByGeometry;$/;"	m	struct:__anon16
+false	everything.h	132;"	d
+faxis	G4Voxels.h	/^	EAxis faxis;$/;"	m	struct:__anon29
+fcontents	G4Voxels.h	/^	GEOMETRYLOC G4int *fcontents;$/;"	m	struct:__anon30
+fcontents	G4Voxels.h	/^	GEOMETRYLOC G4int *fcontents;$/;"	m	struct:__anon31
+file	cl.hpp	/^	const char *file;$/;"	m	class:CL::Exception
+fileToString	myutils.h	/^std::string fileToString( std::string fn )$/;"	f
+fileToString	utils.h	/^std::string fileToString( std::string fn )$/;"	f
+finish	cl.hpp	/^	void finish()$/;"	f	class:CL::CommandQueue
+flmother	G4VPhysicalVolume.h	/^	GEOMETRYLOC G4LogicalVolume   *flmother; \/\/ The current mother logical volume$/;"	m	struct:G4VPhysicalVolume
+flogical	G4VPhysicalVolume.h	/^    GEOMETRYLOC G4LogicalVolume *flogical;   \/\/ The logical volume representing the$/;"	m	struct:G4VPhysicalVolume
+flush	cl.hpp	/^	void flush()$/;"	f	class:CL::CommandQueue
+fmaxEquivalent	G4Voxels.h	/^	G4int fmaxEquivalent;$/;"	m	struct:__anon29
+fmaxEquivalent	G4Voxels.h	/^	G4int fmaxEquivalent;$/;"	m	struct:__anon30
+fmaxEquivalent	G4Voxels.h	/^	G4int fmaxEquivalent;$/;"	m	struct:__anon31
+fmaxExtent	G4Voxels.h	/^	G4double fmaxExtent;$/;"	m	struct:__anon29
+fminEquivalent	G4Voxels.h	/^	G4int fminEquivalent;$/;"	m	struct:__anon29
+fminEquivalent	G4Voxels.h	/^	G4int fminEquivalent;$/;"	m	struct:__anon30
+fminEquivalent	G4Voxels.h	/^	G4int fminEquivalent;$/;"	m	struct:__anon31
+fminExtent	G4Voxels.h	/^	G4double fminExtent;$/;"	m	struct:__anon29
+fn	cuda.cpp	/^typedef struct { const char *err, *fn; int line, errcode; } my_cuda_err;$/;"	m	struct:__anon1	file:
+fn	cudamain.cpp	/^typedef struct { const char *err, *fn; int line, errc; } my_cuda_err;$/;"	m	struct:__anon3	file:
+fparamAxis	G4Voxels.h	/^	EAxis fparamAxis;$/;"	m	struct:__anon29
+frot	G4VPhysicalVolume.h	/^    G4RotationMatrix frot;$/;"	m	struct:G4VPhysicalVolume
+fslices	G4Voxels.h	/^	GEOMETRYLOC struct G4SmartVoxelProxy* GEOMETRYLOC * fslices;$/;"	m	struct:__anon29	typeref:struct:__anon29::GEOMETRYLOC
+ftrans	G4VPhysicalVolume.h	/^    G4ThreeVector ftrans;$/;"	m	struct:G4VPhysicalVolume
+fxAxisMax	G4BuildVoxels.h	/^    G4double fxAxisMin,fxAxisMax;$/;"	m	struct:__anon11
+fxAxisMin	G4BuildVoxels.h	/^    G4double fxAxisMin,fxAxisMax;$/;"	m	struct:__anon11
+fyAxisMax	G4BuildVoxels.h	/^    G4double fyAxisMin,fyAxisMax;$/;"	m	struct:__anon11
+fyAxisMin	G4BuildVoxels.h	/^    G4double fyAxisMin,fyAxisMax;$/;"	m	struct:__anon11
+fzAxisMax	G4BuildVoxels.h	/^    G4double fzAxisMin,fzAxisMax;$/;"	m	struct:__anon11
+fzAxisMin	G4BuildVoxels.h	/^    G4double fzAxisMin,fzAxisMax;$/;"	m	struct:__anon11
+generateExp	hostcommons.hpp	/^	G4double generateExp()$/;"	f	class:SimplePhysicsTestCase
+generateInput	hostcommons.hpp	/^	void generateInput()$/;"	f	class:SimplePhysicsTestCase
+generateInputRaytracerLike	hostcommons.hpp	/^	void generateInputRaytracerLike()$/;"	f	class:SimplePhysicsTestCase
+generateRandomDirection	hostcommons.hpp	/^	G4ThreeVector generateRandomDirection()$/;"	f	class:SimplePhysicsTestCase
+generateUniform01	hostcommons.hpp	/^	G4double generateUniform01()$/;"	f	class:SimplePhysicsTestCase
+geom	hostcommons.hpp	/^	std::auto_ptr<BasicGeometry> geom;$/;"	m	class:TestCaseBase
+getAlignment	geometry_common.hpp	/^	int getAlignment() const { return default_alignment; }$/;"	f	class:BasicGeometry
+getBinary	cl.hpp	/^	std::string getBinary( size_t devno = 0 )$/;"	f	class:CL::Program
+getBuffer	geometry_common.hpp	/^	void *getBuffer() { return buf; }$/;"	f	class:BasicGeometry
+getBuildLog	cl.hpp	/^	std::string getBuildLog()$/;"	f	class:CL::Program
+getContext	cl.hpp	/^	Context& getContext() { return context; }$/;"	f	class:CL::CommandQueue
+getDeviceBuffer	cl.hpp	/^	Buffer &getDeviceBuffer() { return deviceBuffer; }$/;"	f	class:CL::PinnedBufferPair
+getDeviceName	cl.hpp	/^std::string getDeviceName( cl_device_id device )$/;"	f	namespace:CL
+getDevices	cl.hpp	/^	cl_device_id *getDevices() { return devices; }$/;"	f	class:CL::DeviceList
+getEvent	geometry.hpp	/^	virtual EventOrigin getEvent() const$/;"	f	class:Geometry
+getFirstDevice	cl.hpp	/^	cl_device_id getFirstDevice() const$/;"	f	class:CL::DeviceList
+getHandle	cl.hpp	/^	cl_context getHandle() { return handle; }$/;"	f	class:CL::Context
+getHandle	cl.hpp	/^	cl_event getHandle() { return handle; }$/;"	f	class:CL::Event
+getHandle	cl.hpp	/^	cl_kernel getHandle() { return handle; }$/;"	f	class:CL::Kernel
+getHandle	cl.hpp	/^	cl_program getHandle() { return handle; }$/;"	f	class:CL::Program
+getHandle	cl.hpp	/^	inline cl_mem getHandle() { return handle; }$/;"	f	class:CL::Buffer
+getHandlePtr	cl.hpp	/^	inline const cl_mem* getHandlePtr() const { return &handle; }$/;"	f	class:CL::Buffer
+getHostPtr	cl.hpp	/^	inline void *getHostPtr() { return hostPtr; }$/;"	f	class:CL::Pin
+getNumDevices	cl.hpp	/^	cl_uint getNumDevices() const { return numDevices; }$/;"	f	class:CL::DeviceList
+getNumVoxelNodes	geometry.hpp	/^	virtual int getNumVoxelNodes() const { return 0; }$/;"	f	class:Geometry
+getNumVoxelNodes	geometry_common.hpp	/^	int getNumVoxelNodes() const { return nvoxelnodes; }$/;"	f	class:BasicGeometry
+getPlatformIDs	cl.hpp	/^std::list<cl_platform_id> getPlatformIDs()$/;"	f	namespace:CL
+getPlatformName	cl.hpp	/^std::string getPlatformName( cl_platform_id platform )$/;"	f	namespace:CL
+getPtr	gpu2.c	/^GLOBALFUNC void getPtr( GLOBALTYPE void *ptr, GLOBALTYPE void * GLOBALTYPE *out )$/;"	f
+getRounds	hostcommons.hpp	/^	int getRounds() const { return 1; }$/;"	f	class:RaytracingTestCase
+getRounds	hostcommons.hpp	/^	int getRounds() const { return nRounds; }$/;"	f	class:SimplePhysicsTestCase
+getSize	hostcommons.hpp	/^	int getSize() const { return nParticles; }$/;"	f	class:SimplePhysicsTestCase
+getSize	hostcommons.hpp	/^	int getSize() const { return xres*yres; }$/;"	f	class:RaytracingTestCase
+get_global_id	everything.h	88;"	d
+get_local_id	everything.h	89;"	d
+get_local_size	everything.h	90;"	d
+gpuGeom	cuda.cpp	/^Geometry::byte *gpuGeom;$/;"	v
+gpuInput	cuda.cpp	/^Particle *gpuInput;$/;"	v
+gpuNumInput	cuda.cpp	/^int *gpuNumInput;$/;"	v
+gpuOutput	cuda.cpp	/^G4double *gpuOutput;$/;"	v
+guard1	G4VPhysicalVolume.h	/^	int guard1;$/;"	m	struct:G4VPhysicalVolume
+guard2	G4VPhysicalVolume.h	/^	int guard2;$/;"	m	struct:G4VPhysicalVolume
+guard3	G4VPhysicalVolume.h	/^	int guard3;$/;"	m	struct:G4VPhysicalVolume
+handle	cl.hpp	/^	cl_command_queue handle;$/;"	m	class:CL::CommandQueue
+handle	cl.hpp	/^	cl_context handle;$/;"	m	class:CL::Context
+handle	cl.hpp	/^	cl_event handle;$/;"	m	class:CL::Event
+handle	cl.hpp	/^	cl_kernel handle;$/;"	m	class:CL::Kernel
+handle	cl.hpp	/^	cl_mem handle;$/;"	m	class:CL::Buffer
+handle	cl.hpp	/^	cl_program handle;$/;"	m	class:CL::Program
+heading	geometry.hpp	/^		heading,$/;"	m	struct:CameraParameters
+hostPtr	cl.hpp	/^	void *hostPtr;$/;"	m	class:CL::Pin
+init	gpu2.c	/^GLOBALFUNC void init($/;"	f
+input	hostcommons.hpp	/^	std::vector<ParticleWithLifetime> input;$/;"	m	class:SimplePhysicsTestCase
+input	hostcommons.hpp	/^	std::vector<StubParticle> input;$/;"	m	class:RaytracingTestCase
+kBox	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+kCons	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+kInfinity	everything.h	/^CONSTTYPE G4double kInfinity = 1.0E37;$/;"	v
+kInfinity	everything.h	/^static CONSTTYPE const G4double kInfinity = 9.0E99;$/;"	v
+kInside	everything.h	/^typedef enum {kOutside,kSurface,kInside} EInside;$/;"	e	enum:__anon5
+kMinExitingNormalCosine	everything.h	/^CONSTTYPE G4double kMinExitingNormalCosine = 1E-3;$/;"	v
+kNormal	everything.h	/^typedef enum {kNormal,kReplica,kParameterised} EVolume;$/;"	e	enum:__anon6
+kOrb	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+kOutside	everything.h	/^typedef enum {kOutside,kSurface,kInside} EInside;$/;"	e	enum:__anon5
+kParameterised	everything.h	/^typedef enum {kNormal,kReplica,kParameterised} EVolume;$/;"	e	enum:__anon6
+kPhi	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kPolyCone	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+kRadial3D	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kReplica	everything.h	/^typedef enum {kNormal,kReplica,kParameterised} EVolume;$/;"	e	enum:__anon6
+kRho	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kSurface	everything.h	/^typedef enum {kOutside,kSurface,kInside} EInside;$/;"	e	enum:__anon5
+kTubs	everything.h	/^typedef enum { kBox = 0 , kOrb, kTubs, kCons, kPolyCone, Solidcount } ESolid;$/;"	e	enum:__anon8
+kUndefined	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kXAxis	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kYAxis	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+kZAxis	everything.h	/^typedef enum {kXAxis,kYAxis,kZAxis,kRho,kRadial3D,kPhi,kUndefined} EAxis;$/;"	e	enum:__anon7
+line	cl.hpp	/^	int line;$/;"	m	class:CL::Exception
+line	cuda.cpp	/^typedef struct { const char *err, *fn; int line, errcode; } my_cuda_err;$/;"	m	struct:__anon1	file:
+line	cudamain.cpp	/^typedef struct { const char *err, *fn; int line, errc; } my_cuda_err;$/;"	m	struct:__anon3	file:
+listAndPrintPlatforms	cl.hpp	/^void listAndPrintPlatforms()$/;"	f	namespace:CL
+main	cpumain.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	cudamain.cpp	/^int main(int argc, char *argv[])$/;"	f
+main	openclmain - Working.cpp	/^int main( int argc, char *argv[] )$/;"	f
+main	openclmain.cpp	/^int main( int argc, char *argv[] )$/;"	f
+maxbufsz	geometry_common.hpp	/^	int bufsz, maxbufsz;$/;"	m	class:BasicGeometry
+minVoxelVolumesLevel1	G4VoxelHeader.cpp	/^static int minVoxelVolumesLevel1 = K_MIN_VOXEL_VOLUMES_LEVEL_1;$/;"	v	file:
+minVoxelVolumesLevel2	G4VoxelHeader.cpp	/^static int minVoxelVolumesLevel2 = K_MIN_VOXEL_VOLUMES_LEVEL_2;$/;"	v	file:
+minVoxelVolumesLevel3	G4VoxelHeader.cpp	/^static int minVoxelVolumesLevel3 = K_MIN_VOXEL_VOLUMES_LEVEL_3;$/;"	v	file:
+myAbort	everything.h	105;"	d
+myAbort	everything.h	108;"	d
+myAssert	everything.h	104;"	d
+myAssert	everything.h	107;"	d
+my_clock	myutils.h	/^inline static my_clock_t my_clock()$/;"	f
+my_clock_t	myutils.h	/^typedef struct timeval my_clock_t;$/;"	t	typeref:struct:timeval
+my_cuda_err	cuda.cpp	/^typedef struct { const char *err, *fn; int line, errcode; } my_cuda_err;$/;"	t	typeref:struct:__anon1	file:
+my_cuda_err	cudamain.cpp	/^typedef struct { const char *err, *fn; int line, errc; } my_cuda_err;$/;"	t	typeref:struct:__anon3	file:
+myprint	cudamain.cpp	/^	void myprint( const char *str )$/;"	f
+myprint1	cudamain.cpp	/^	void myprint1( const char *str, int n )$/;"	f
+myprinttdiff	cudamain.cpp	/^	void myprinttdiff( mytimet a, mytimet b )$/;"	f
+mysleep	cudamain.cpp	/^	void mysleep(int n)$/;"	f
+mytimer	cudamain.cpp	/^	mytimet mytimer()$/;"	f
+mytimet	cuda.cpp	/^typedef struct { int secs; int usecs; } mytimet;$/;"	t	typeref:struct:__anon2	file:
+mytimet	cudamain.cpp	/^	typedef struct { int secs; int usecs; } mytimet;$/;"	t	typeref:struct:__anon4	file:
+nParticles	hostcommons.hpp	/^	int nParticles;$/;"	m	class:SimplePhysicsTestCase
+nRounds	hostcommons.hpp	/^	int nRounds;$/;"	m	class:SimplePhysicsTestCase
+navkeys	cuda.cpp	/^int *navkeys, *navvals, *newnavvals, *particleIndices;$/;"	v
+navs	cuda.cpp	/^G4Navigator *navs;$/;"	v
+navvals	cuda.cpp	/^int *navkeys, *navvals, *newnavvals, *particleIndices;$/;"	v
+navvalsCpu	cuda.cpp	/^int *navvalsCpu, *particleIndicesCpu;$/;"	v
+newnavvals	cuda.cpp	/^int *navkeys, *navvals, *newnavvals, *particleIndices;$/;"	v
+numDevices	cl.hpp	/^	cl_uint numDevices;$/;"	m	class:CL::DeviceList
+numInput	cuda.cpp	/^int numInput, numOutput, numInputPerRound;$/;"	v
+numInputPerRound	cuda.cpp	/^int numInput, numOutput, numInputPerRound;$/;"	v
+numOutput	cuda.cpp	/^int numInput, numOutput, numInputPerRound;$/;"	v
+nvoxelnodes	geometry_common.hpp	/^	int nvoxelnodes;$/;"	m	class:BasicGeometry
+oclErrorString	cl.hpp	/^static const char* oclErrorString(cl_int error)$/;"	f	namespace:CL
+offset	geometry_common.hpp	/^		unsigned long offset;$/;"	m	struct:__anon32
+operator =	cl.hpp	/^	Event& operator=( const Event& ev )$/;"	f	class:CL::Event
+ops	myutils.h	28;"	d
+ops	utils.h	30;"	d
+output	hostcommons.hpp	/^	std::vector<G4double> output;$/;"	m	class:RaytracingTestCase
+output	hostcommons.hpp	/^	std::vector<G4double> output;$/;"	m	class:SimplePhysicsTestCase
+outputCpu	cuda.cpp	/^G4double *outputCpu;$/;"	v
+outputData	hostcommons.hpp	/^	void outputData( const char *fn ) const$/;"	f	class:RaytracingTestCase
+outputData	hostcommons.hpp	/^	void outputData( const char *fn ) const$/;"	f	class:SimplePhysicsTestCase
+particle	G4Navigator2.h	/^	Particle particle;$/;"	m	struct:__anon16
+particleIndices	cuda.cpp	/^int *navkeys, *navvals, *newnavvals, *particleIndices;$/;"	v
+particleIndicesCpu	cuda.cpp	/^int *navvalsCpu, *particleIndicesCpu;$/;"	v
+particlesCpu	cuda.cpp	/^Particle *particlesCpu;$/;"	v
+phys_step	hostcommons.hpp	/^	G4double phys_step;$/;"	m	class:TestCaseBase
+pitch	geometry.hpp	/^		pitch,$/;"	m	struct:CameraParameters
+plan	cuda.cpp	/^CUDPPHandle plan;$/;"	v
+pointer	geometry_common.hpp	/^	std::vector<StrayPointer> pointer() { return ptrs;}$/;"	f	class:BasicGeometry
+pos	stubParticle.h	/^	G4ThreeVector pos, dir;$/;"	m	struct:__anon35
+pos	stubParticle.h	/^	G4ThreeVector pos, dir;$/;"	m	struct:__anon36
+printInfo	cl.hpp	/^	void printInfo()$/;"	f	class:CL::DeviceList
+print_stuff	openclmain - Working.cpp	/^void print_stuff( void * pointer, int size)$/;"	f
+property	geometry_common.hpp	/^		int property;$/;"	m	struct:__anon32
+property	stubMaterial.h	/^	G4double property;$/;"	m	struct:__anon34
+ptrs	geometry_common.hpp	/^	std::vector< StrayPointer > ptrs;$/;"	m	class:BasicGeometry
+ptrs_size	geometry_common.hpp	/^	int ptrs_size() const {return ptrs.size();}$/;"	f	class:BasicGeometry
+r	G4RotationMatrix_inline.c	49;"	d	file:
+r	G4RotationMatrix_inline.c	60;"	d	file:
+randInit	hostcommons.hpp	/^	void randInit( int seed )$/;"	f	class:SimplePhysicsTestCase
+randomRot	geometry_common.hpp	/^	G4RotationMatrix randomRot()$/;"	f	class:BasicGeometry
+randomSeed	hostcommons.hpp	/^	int randomSeed;$/;"	m	class:SimplePhysicsTestCase
+relocate	geometry_common.hpp	/^	void relocate( void *newbegin )$/;"	f	class:BasicGeometry
+relocate	gpu.c	/^GLOBALFUNC void relocate ( GLOBALTYPE int * ptr, GLOBALTYPE void * buf, int size )$/;"	f
+reserveNThings	geometry_common.hpp	/^	template <class T> T* reserveNThings( int N )$/;"	f	class:BasicGeometry
+reserveNThingsAligned	geometry_common.hpp	/^	template <class T> T* reserveNThingsAligned( int N, int alignment = sizeof(T) )$/;"	f	class:BasicGeometry
+reserveNThingsSelfAligned	geometry_common.hpp	/^	template <class T> T* reserveNThingsSelfAligned( int N )$/;"	f	class:BasicGeometry
+reserveNThingsUnaligned	geometry_common.hpp	/^	template <class T> T* reserveNThingsUnaligned( int N )$/;"	f	class:BasicGeometry
+reserveThing	geometry_common.hpp	/^	template <class T> T* reserveThing()$/;"	f	class:BasicGeometry
+reserveThing	geometry_common.hpp	/^	void *reserveThing( int thingsz )$/;"	f	class:BasicGeometry
+reserveThingAligned	geometry_common.hpp	/^	template <class T> T* reserveThingAligned( int alignment = sizeof(T) )$/;"	f	class:BasicGeometry
+reserveThingAligned	geometry_common.hpp	/^	void *reserveThingAligned( int thingsz, int alignment )$/;"	f	class:BasicGeometry
+reserveThingUnaligned	geometry_common.hpp	/^	template <class T> T* reserveThingUnaligned()$/;"	f	class:BasicGeometry
+reserveThingUnaligned	geometry_common.hpp	/^	void *reserveThingUnaligned( int thingsz )$/;"	f	class:BasicGeometry
+rng	hostcommons.hpp	/^	boost::mt19937 rng; $/;"	m	class:SimplePhysicsTestCase
+roll	geometry.hpp	/^		roll,$/;"	m	struct:CameraParameters
+rxx	G4AffineTransform.h	/^  G4double rxx,rxy,rxz;$/;"	m	struct:__anon9
+rxx	G4RotationMatrix.h	/^		rxx, rxy, rxz, $/;"	m	struct:__anon24
+rxy	G4AffineTransform.h	/^  G4double rxx,rxy,rxz;$/;"	m	struct:__anon9
+rxy	G4RotationMatrix.h	/^		rxx, rxy, rxz, $/;"	m	struct:__anon24
+rxz	G4AffineTransform.h	/^  G4double rxx,rxy,rxz;$/;"	m	struct:__anon9
+rxz	G4RotationMatrix.h	/^		rxx, rxy, rxz, $/;"	m	struct:__anon24
+ryx	G4AffineTransform.h	/^  G4double ryx,ryy,ryz;$/;"	m	struct:__anon9
+ryx	G4RotationMatrix.h	/^		ryx, ryy, ryz, $/;"	m	struct:__anon24
+ryy	G4AffineTransform.h	/^  G4double ryx,ryy,ryz;$/;"	m	struct:__anon9
+ryy	G4RotationMatrix.h	/^		ryx, ryy, ryz, $/;"	m	struct:__anon24
+ryz	G4AffineTransform.h	/^  G4double ryx,ryy,ryz;$/;"	m	struct:__anon9
+ryz	G4RotationMatrix.h	/^		ryx, ryy, ryz, $/;"	m	struct:__anon24
+rzx	G4AffineTransform.h	/^  G4double rzx,rzy,rzz;$/;"	m	struct:__anon9
+rzx	G4RotationMatrix.h	/^		rzx, rzy, rzz;$/;"	m	struct:__anon24
+rzy	G4AffineTransform.h	/^  G4double rzx,rzy,rzz;$/;"	m	struct:__anon9
+rzy	G4RotationMatrix.h	/^		rzx, rzy, rzz;$/;"	m	struct:__anon24
+rzz	G4AffineTransform.h	/^  G4double rzx,rzy,rzz;$/;"	m	struct:__anon9
+rzz	G4RotationMatrix.h	/^		rzx, rzy, rzz;$/;"	m	struct:__anon24
+safety	G4Navigator.h	/^   float safety;$/;"	m	struct:__anon18
+safety	G4Navigator.h	/^   float safety;$/;"	m	struct:__anon19
+secs	cuda.cpp	/^typedef struct { int secs; int usecs; } mytimet;$/;"	m	struct:__anon2	file:
+secs	cudamain.cpp	/^	typedef struct { int secs; int usecs; } mytimet;$/;"	m	struct:__anon4	file:
+selectPlatform	cl.hpp	/^cl_platform_id selectPlatform()$/;"	f	namespace:CL
+setArg	cl.hpp	/^	void setArg( cl_uint index, const Buffer& buf )$/;"	f	class:CL::Kernel
+setArg	cl.hpp	/^	void setArg( cl_uint index, size_t arg_size, const void *val )$/;"	f	class:CL::Kernel
+sinCPhi	G4Cons.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon12
+sinCPhi	G4Tubs.h	/^    G4double sinCPhi, cosCPhi, cosHDPhiOT, cosHDPhiIT,$/;"	m	struct:__anon26
+sinEPhi	G4Cons.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon12
+sinEPhi	G4Tubs.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon26
+sinSPhi	G4Cons.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon12
+sinSPhi	G4Tubs.h	/^             sinSPhi, cosSPhi, sinEPhi, cosEPhi;$/;"	m	struct:__anon26
+size	cl.hpp	/^	inline size_t size() const { return sz; }$/;"	f	class:CL::Buffer
+size	geometry_common.hpp	/^	int size() const { return bufsz; }$/;"	f	class:BasicGeometry
+sizeMB	myutils.h	30;"	d
+sizeMB	utils.h	32;"	d
+solid	G4Box.h	/^	G4VSolid solid;$/;"	m	struct:__anon10
+solid	G4Cons.h	/^	G4VSolid solid;$/;"	m	struct:__anon12
+solid	G4Orb.h	/^	G4VSolid solid;$/;"	m	struct:__anon23
+solid	G4Tubs.h	/^	G4VSolid solid;$/;"	m	struct:__anon26
+std_min	G4NewNavigation.c	294;"	d	file:
+std_min	G4VoxelNavigation.c	287;"	d	file:
+step	G4Navigator.h	/^   float step;$/;"	m	struct:__anon18
+step	G4Navigator.h	/^   float step;$/;"	m	struct:__anon19
+storeVoxelHeader	geometry_common.hpp	/^	G4SmartVoxelHeader *storeVoxelHeader( const G4SmartVoxelHeader &original )$/;"	f	class:BasicGeometry
+storeVoxelNode	geometry_common.hpp	/^	G4SmartVoxelNode *storeVoxelNode( const G4SmartVoxelNode &original )$/;"	f	class:BasicGeometry
+sz	cl.hpp	/^	const size_t sz;$/;"	m	class:CL::Buffer
+t	stubParticle.h	/^	G4double t;$/;"	m	struct:__anon36
+target_x	geometry.hpp	/^		target_x,$/;"	m	struct:CameraParameters
+target_y	geometry.hpp	/^		target_y,$/;"	m	struct:CameraParameters
+target_z	geometry.hpp	/^		target_z;$/;"	m	struct:CameraParameters
+targoffs	geometry_common.hpp	/^		unsigned long targoffs;$/;"	m	struct:BasicGeometry::__anon33
+tdiff	myutils.h	/^inline static double tdiff( my_clock_t a, my_clock_t b )$/;"	f
+tdiffms	myutils.h	25;"	d
+tdiffms	utils.h	27;"	d
+test	gpu.c	/^GLOBALFUNC void test ( GLOBALTYPE bool * output $/;"	f
+tf	G4AffineTransform_inline.c	154;"	d	file:
+tf	G4AffineTransform_inline.c	420;"	d	file:
+tf1	G4AffineTransform_inline.c	155;"	d	file:
+tf1	G4AffineTransform_inline.c	421;"	d	file:
+tf2	G4AffineTransform_inline.c	156;"	d	file:
+tf2	G4AffineTransform_inline.c	422;"	d	file:
+toFloat	hostcommons.hpp	/^	double toFloat( std::string str )$/;"	f	class:TestCaseBase
+toInt	hostcommons.hpp	/^	int toInt( const std::string& str )$/;"	f	class:TestCaseBase
+trace	gpu.c	/^GLOBALFUNC void trace($/;"	f
+trackId	G4Navigator.h	/^   int trackId;$/;"	m	struct:__anon18
+trackId	G4Navigator.h	/^  G4int trackId;$/;"	m	struct:__anon17
+transferFromDevice	cl.hpp	/^	Event transferFromDevice($/;"	f	class:CL::PinnedBufferPair
+transferToDevice	cl.hpp	/^	Event transferToDevice($/;"	f	class:CL::PinnedBufferPair
+true	everything.h	131;"	d
+tryInput	hostcommons.hpp	/^	bool tryInput( const std::string& src, std::string prefix, std::string &target )$/;"	f	class:TestCaseBase
+twopi	everything.h	/^CONSTTYPE G4double twopi = 2.0*M_PI;$/;"	v
+tx	G4AffineTransform.h	/^  G4double tx,ty,tz;$/;"	m	struct:__anon9
+ty	G4AffineTransform.h	/^  G4double tx,ty,tz;$/;"	m	struct:__anon9
+type	G4VSolid.h	/^	ESolid type;$/;"	m	struct:G4VSolid
+tz	G4AffineTransform.h	/^  G4double tx,ty,tz;$/;"	m	struct:__anon9
+uniformRand	geometry_common.hpp	/^	G4double uniformRand()$/;"	f	class:BasicGeometry
+usecs	cuda.cpp	/^typedef struct { int secs; int usecs; } mytimet;$/;"	m	struct:__anon2	file:
+usecs	cudamain.cpp	/^	typedef struct { int secs; int usecs; } mytimet;$/;"	m	struct:__anon4	file:
+userbuf	geometry_common.hpp	/^	const bool userbuf;$/;"	m	class:BasicGeometry
+w	G4ThreeVector.h	/^	G4double w;$/;"	m	struct:__anon25
+what	cl.hpp	/^	virtual const char *what() const throw()$/;"	f	class:CL::Exception
+writeBinary	cl.hpp	/^	void writeBinary( std::ostream &s, size_t devno = 0 )$/;"	f	class:CL::Program
+x	G4ThreeVector.h	/^	G4double x,y,z;$/;"	m	struct:__anon25
+x	geometry.hpp	/^	double x,y,z;$/;"	m	struct:EventOrigin
+xres	hostcommons.hpp	/^	int xres, yres;$/;"	m	class:RaytracingTestCase
+y	G4ThreeVector.h	/^	G4double x,y,z;$/;"	m	struct:__anon25
+y	geometry.hpp	/^	double x,y,z;$/;"	m	struct:EventOrigin
+yfov	geometry.hpp	/^		yfov,$/;"	m	struct:CameraParameters
+yres	hostcommons.hpp	/^	int xres, yres;$/;"	m	class:RaytracingTestCase
+z	G4ThreeVector.h	/^	G4double x,y,z;$/;"	m	struct:__anon25
+z	geometry.hpp	/^	double x,y,z;$/;"	m	struct:EventOrigin
+~BasicGeometry	geometry_common.hpp	/^	~BasicGeometry()$/;"	f	class:BasicGeometry
+~Buffer	cl.hpp	/^	virtual ~Buffer()$/;"	f	class:CL::Buffer
+~CommandQueue	cl.hpp	/^	virtual ~CommandQueue()$/;"	f	class:CL::CommandQueue
+~Context	cl.hpp	/^	virtual ~Context()$/;"	f	class:CL::Context
+~DeviceList	cl.hpp	/^	virtual ~DeviceList()$/;"	f	class:CL::DeviceList
+~Event	cl.hpp	/^	~Event() { clReleaseEvent( handle ); }$/;"	f	class:CL::Event
+~Exception	cl.hpp	/^	~Exception() throw() {}$/;"	f	class:CL::Exception
+~Geometry	geometry.hpp	/^	virtual ~Geometry() {}$/;"	f	class:Geometry
+~Kernel	cl.hpp	/^	virtual ~Kernel()$/;"	f	class:CL::Kernel
+~Pin	cl.hpp	/^	virtual ~Pin()$/;"	f	class:CL::Pin
+~Program	cl.hpp	/^	virtual ~Program()$/;"	f	class:CL::Program
+~TestCaseBase	hostcommons.hpp	/^	virtual ~TestCaseBase() {}$/;"	f	class:TestCaseBase

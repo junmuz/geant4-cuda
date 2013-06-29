@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3618/green-it/gpu-computing/OpenCL/common
+END
+nocl.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3560/green-it/gpu-computing/OpenCL/common/nocl.h
+END
+cl.hpp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3618/green-it/gpu-computing/OpenCL/common/cl.hpp
+END
+utils.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3576/green-it/gpu-computing/OpenCL/common/utils.h
+END

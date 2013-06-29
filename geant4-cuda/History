@@ -1,0 +1,120 @@
+-------------------------------------------------------------------
+
+     =========================================================
+     Geant4GPU - a protype mplementation of Geant4 on GPUs
+     =========================================================
+
+                      Category History file
+                      ---------------------
+This file should be used by G4gpu developers and taggers to briefly 
+summarize all major modifications introduced in the code and keep 
+track of all directory-tags.
+It DOES NOT substitute the  SVN log-message one should put at every
+committal in the SVN repository !
+
+     ----------------------------------------------------------
+     * Reverse chronological order (last date on top), please *
+
+August 23, 2012 Dhruva T.B.
+---------------------------------------------------------
+Fix for NewNavigation in gpu.c. The while( cur_vol) loop now exits only when all threads are ready. The way this is done is by using local bools and using
+the NoStepReduction to find whether all threads are ready to exit. if(voxelised) ?.
+Minor changes to naming convention and code cleanup. Find_minimum is now implemented seperately in an external icc file.
+
+
+
+August 17 , 2012 Dhruva T.B. 
+---------------------------------------------------------
+Fix for NewNavigation. SamplePoint used to calculate the step and safety in the previous version was wrong.
+A new array called LocationArray has been implemented which stores the information of the localPoint and its direction which are used
+when calculating the steps. Minor changes also made in naming convention. A new int locationId is now used for array indexing whose value is 
+set depending on whether GLOBAL_MODE  is set or not. 
+
+
+August 15 , 2012 Dhruva T.B. 
+---------------------------------------------------------
+Fix for New Navigation implemented. Fix adds a new bool noStepAll to ensure that the while(noStep) loop is exited by all threads in sync and that all threads see barriers correctly.
+New Navigation does not loop indefinitely any longer. toy1 works correctly.
+Open Issues with toy2-: 
+With GLOBAL_MODE  set to zero compiler crashes. With GLOBAL_MODE  set to 1 code gives zero output. 
+
+August 12 , 2012 Dhruva T.B. 
+---------------------------------------------------------
+Updates for OpenCL AMD. Defined GLOBAL_MODE  macro and testing code with global memory in place of shared memory. Changes to openclmain and G4NewNavigation.c
+Code no longer hangs on barrier statement. Changes made only for debugging purposes. Final revision should set GLOBAL_MODE  to 0 in gpuconf.h
+Current open issue with Prefix_Sum calculation.
+
+August 08 , 2012 Dhruva T.B. 
+---------------------------------------------------------
+Updating with changes to OpenCL AMD version of the code. Changes made to VoxelNavigation.c ( legacy ) and gpu.c which now allows toy1 and toy2 tests to run
+with VoxelNavigation. With NewNavigation enabled toy1 runs but toy2 does not run.
+Commit from lxplus made but changes not reflected in log file. New macro SHAREDSHADOW defined to allow for consistency with CUDA. Since CUDA code does not allow
+type specifiers shared memory arrays should now be defined with SHAREDTYPE but when their pointers are being passed to functions use SHAREDSHADOW. This is so that
+when being passed into functions the shadow does not define any type specifier.
+Minor changes made to try and print from Cuda kernels. Changes not tested yet.
+
+August 02 , 2012 Dhruva T.B. 
+---------------------------------------------------------
+Defined new macro GEOMTYPE.
+Error on OpenCL AMD version was found ( by using the Geometry Check ) to be with inconsistency of size of unsigned long on CPU and GPU.
+New macro called GEOMTYPE defined and replaced in appropriate places. Code tested to work ( toy1 and VoxelNavigation with toy2) with this 
+macro on all platforms. 
+
+
+July 24, 2012 Dhruva T.B. 
+---------------------------------------------------------
+Made changes so that the code with VoxelNavigation works with CUDA. 
+Fix for the bug which was causing so many problems was in everything.h. Changed the definition of INLINEFUNC from static inline to just inline.
+Other minor changes ( barrier statements replaced with __syncthreads() ) made for CUDA compatibility. 
+New Navigation still not tested on the CUDA machine.
+
+
+July 23, 2012 Dhruva T.B.				(To be called g4gpu-V00-01-04)
+----------------------------------------------------------
+Made first tagged version in /tags/first-tag. This version has some fixes in cuda.cpp to get the code
+to compile for CUDA and some changes to allow it to compile for openCL on 64bit.
+However these changes are not complete and the code in this revision does NOT work. It is only a test revision to
+update tags. The tag was created on the lxplus machine and not using Tortoise SVN.
+
+
+July 20, 2012 Dhruva T.B.				(To be called g4gpu-V00-01-04)
+----------------------------------------------------------
+Find_minimum function implemented to find the minimum step. Find_minimum tested using kernel test and confirmed to work.
+The Find_minimum calculates the minimum step among all the step sizes in a shared memory array and stores the result 
+along with the safety and a pointer to the Physical Volume in another array passed in as the second argument. 
+NOTE that the function is implemented in G4Navigator.h. ( This is one place I could think of where all the structs etc. that need to be defined 
+before can be defined and so that it can be accessed by NewNavigation and gpu.c)
+
+New Navigation not completely implemented and tested yet. 
+
+
+July 17, 2012 Dhruva T.B.				(To be called g4gpu-V00-01-03
+----------------------------------------------------------
+Added new navigation as a seperate class. Now voxel navigation and new navigation can be run by specifying
+the macro ENABLE_NEW_NAVIGATION in gpuconf.h The new code compiles and executes ( it does not loop indefinitely ).
+The implementation to find the minimum is in G4Navigator.h . 
+The current implemenation is only the most basic one. Future version will change the way the voxels return volumes
+such that the volumes are returned sorted by type.
+
+However, the new code has not been tested for compatibility with CUDA.
+
+NOTE: In this version of the code, results for OpenCL and CUDA do NOT match. There is still some inconsistency
+which needs to be looked into. On running toy1 geometry quite a few values seem similar, but toy2 is completely inconsistent.
+The inconsistency is between results on OpenCL and those on CUDA. On their own, the results for each do not change, it is only
+when compared against each other that the results do not match.
+
+
+July 11, 2012 John Apostolakis         (To be called g4gpu-V00-01-02
+------------------------------
+Fixes for working on MacOSX OpenCL
+
+July 10, 2012 Dhruva                   (To be called g4gpu-V00-01-01
+------------------------------
+Working version
+- Tests for relocation method
+- New relocation on GPU
+
+June 29, 2012 John Apostolakis                       g4gpu-V00-01-00
+------------------------------
+- Otto's original code, as sent to us in early 2012.
+ 

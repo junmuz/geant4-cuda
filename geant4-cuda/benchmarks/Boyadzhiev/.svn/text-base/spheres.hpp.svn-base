@@ -1,0 +1,467 @@
+
+/** Geometry based on a voxelization benchmark by Ivaylo Boyadzhiev */
+
+#ifndef BOYADZHIEV_GEOMETRY_SPHERES_HPP
+#define BOYADZHIEV_GEOMETRY_SPHERES_HPP
+
+#include "../../geometry_common.hpp"
+
+#include <map>
+
+class BoyadzhievSpheres : public BasicGeometry
+{
+public:
+
+	typedef enum {
+		SPHERES,
+		CONS,
+		MIXED
+	} OBJECT_TYPE; /* Defines what kind of small objects to put */
+
+	BoyadzhievSpheres( int maxsz = 20000 * 1024 )
+	 : BasicGeometry( maxsz )
+	{
+		// default parameters
+		num = 3;
+		smartless = kInfinity;
+		density = 0.5;
+		flat = false;
+		test_type = MIXED;
+		rotated = true;
+		sliced = true;
+		
+		smallObjRad = 40;
+		
+		mixedDistribution[kOrb] = 2;
+		mixedDistribution[kTubs] = 5;
+		mixedDistribution[kBox] = 1;
+		mixedDistribution[kCons] = 3;
+		
+		objmaterial = NULL;
+		
+		std::srand( 3 );
+	}
+	
+	void setParams( G4int num_, G4double smartless_,
+		G4double density_, G4bool flat_, OBJECT_TYPE test_type_,
+		G4bool rotated_, G4bool sliced_, std::map< ESolid, G4double > distribution_ )
+	{
+		num = num_;
+		smartless = smartless_;
+		density = density_;
+		flat = flat_;
+		test_type = test_type_;
+		rotated = rotated_;
+		sliced = sliced_;
+		mixedDistribution = distribution_;
+	}
+	
+	double getScale() const
+	{
+		return 50000;
+	}
+	
+	CameraParameters getCamera() const
+	{
+		CameraParameters p;
+		p.heading = -110;
+		p.pitch = 10;
+		p.dist = 0.035*getScale()*2;
+		p.yfov = 80;
+		return p;
+	}
+	 
+private:
+	G4int num;
+	G4double smartless;
+	G4double density, smallObjRad;
+	G4bool flat, rotated, sliced;
+	OBJECT_TYPE test_type;
+	std::map< ESolid, G4double > mixedDistribution;
+	
+	StubMaterial *objmaterial;
+	
+	void create_impl()
+	{
+		// all units in millimeters (mm)
+		
+		/* Radius of the first big sphere layer will be 2 * INIT_R */
+		const G4double INIT_R = 512;
+
+		int numSmallObjs = 0;
+		
+		const G4RotationMatrix idRot = G4RotationMatrix_create_id();
+		const G4ThreeVector zeroTrans = G4ThreeVector_create( 0,0,0 );
+		
+		// World volume must be first
+		
+		G4VPhysicalVolume *physiWorld = reserveThing<G4VPhysicalVolume>();
+		G4LogicalVolume *logicWorld = reserveThing<G4LogicalVolume>();
+		G4Box *solidWorld = reserveThing<G4Box>();
+		StubMaterial *air = reserveThing<StubMaterial>();
+		objmaterial = reserveThing<StubMaterial>();
+		
+		air->property = 0; //0.005;
+		objmaterial->property = 3.0;
+		
+		G4Box_ctor(solidWorld, 100000, 100000, 100000); // (in millimeters)
+		G4LogicalVolume_ctor(logicWorld, (G4VSolid*)solidWorld, air);
+		G4VPhysicalVolume_ctor(physiWorld, idRot, zeroTrans, logicWorld);
+
+		/* Calculate the radius of the last layer of big spheres */
+		G4double currR = INIT_R * std::pow(2., num);
+
+		/* Used to create the hierarchy of big spheres */
+		G4LogicalVolume* lastLogical = logicWorld; 
+		G4VPhysicalVolume* lastPhysical = physiWorld; 
+		
+		G4LogicalVolume *bigLogicals = reserveNThings<G4LogicalVolume>(num);
+		G4VPhysicalVolume *bigPhysicals = reserveNThings<G4VPhysicalVolume>(num);
+		G4Orb *bigSolids = reserveNThings<G4Orb>(num);
+		
+		std::vector< std::vector<G4VPhysicalVolume*> > smallPhysicals(num);
+		
+		/* Start to build the geometry from the most outer layer */
+		for (int i = 0; i < num; ++i, currR /= 2)
+		{
+			/* Create the hierarchy of big spheres in non flat geometry OR
+			   Just one mother sphere for the flat case */
+			if (!flat || (flat && i == 0))
+			{
+				G4Orb* bigSphere = bigSolids+i;
+				G4LogicalVolume* currLogical = bigLogicals+i;
+				G4VPhysicalVolume *currPhys = bigPhysicals+i;
+				
+				G4Orb_ctor( bigSphere, currR );
+				G4LogicalVolume_ctor( currLogical, (G4VSolid*)bigSphere, air );
+				G4VPhysicalVolume_ctor( currPhys, idRot, zeroTrans, currLogical );
+				G4VPhysicalVolume_SetMotherLogical( currPhys, lastLogical );
+
+				lastLogical = currLogical;
+				lastPhysical = currPhys;
+			}
+
+			/* Place lots of small spheres or cons inside */
+
+			/*  The distance of the layer of small objects (spheres or cons)
+				will be in the middle of the two adjacent Big Spheres */
+			G4double dist = 3 * currR / 4.; 
+			
+			int physListIdx = flat ? (num-1) : i;
+			
+			if ( test_type == SPHERES )
+			{
+				numSmallObjs +=
+					addSmallSpheres( dist, density, lastLogical, smallPhysicals[physListIdx] );
+			}
+			else if ( test_type == MIXED )
+			{
+				numSmallObjs +=
+					addMixed( dist, density, lastLogical, smallPhysicals[physListIdx],
+						mixedDistribution );
+			}
+			else
+			{
+				// TODO
+				assert(false);
+				//AddSmallCons( dist, density, lastLogical, num-i, smallPhysicals[physListIdx]  );
+			}
+			
+			if (!flat || (flat && i==num-1))
+			{
+				for ( unsigned j=0; j<smallPhysicals[physListIdx].size(); ++j )
+				{
+					addLogicalVolumeDaughter( lastLogical, smallPhysicals[physListIdx][j] );
+				}
+				
+				if ( i != num-1 )
+				{
+					addLogicalVolumeDaughter( lastLogical, bigPhysicals+i+1 );
+				}
+				
+				if ( lastLogical != logicWorld )
+				{
+					//addLogicalVolumePointers( lastLogical );
+					addPhysicalVolumePointers( lastPhysical );
+				}
+			}
+		}
+		
+		addLogicalVolumeDaughter( logicWorld, bigPhysicals );
+		
+		//createVoxels( logicWorld, smartless );
+		for (int i = 0; i<(flat ? 1 : num); ++i)
+		{
+			#ifdef ENABLE_VOXEL_NAVIGATION
+			createVoxels( bigLogicals + i, smartless );
+			#endif
+			addLogicalVolumePointers( bigLogicals + i );
+		}
+		
+		addLogicalVolumePointers( logicWorld );
+		addPhysicalVolumePointers( physiWorld );
+		
+		std::cerr << "Total " << numSmallObjs << " small objects\n";
+	}
+	
+	
+	// New by oseiskar
+	
+	static void normalize( std::map< ESolid, G4double >& objs )
+	{
+		typedef std::map< ESolid, G4double >::iterator itr_t;
+		G4double sum = 0;
+		for( itr_t i = objs.begin(); i != objs.end(); ++i )
+			sum += i->second;
+			
+		if ( sum <= 0.0 )
+			throw std::runtime_error( "Invalid distribution" );
+		
+		const G4double isum = 1.0/sum;
+		for( itr_t i = objs.begin(); i != objs.end(); ++i ) 
+			i->second *= isum;
+	}
+	
+	int addMixed(
+		G4double dist, G4double density, G4LogicalVolume* motherLogical,
+		std::vector<G4VPhysicalVolume*>& physList,
+		std::map< ESolid, G4double >& distribution )
+	{
+		normalize( distribution );
+		
+		const G4RotationMatrix idRot = G4RotationMatrix_create_id();
+		const G4double SMALL_OBJ_MAXR = smallObjRad;
+		
+		/* Define the distance between the small spheres */
+		const G4double THETA_DIST_FACTOR = 3.;
+		const G4double PHI_DIST_FACTOR = 1.;
+		const G4double isqrt2 = 1.0/std::sqrt(2);
+		
+		/* Theta distance between adjacent spheres */
+		const G4double dTheta = THETA_DIST_FACTOR * 2 * std::asin(SMALL_OBJ_MAXR / dist); 
+
+		int cnt = 0;
+		
+		for (G4double theta = dTheta; theta + dTheta < M_PI; theta += dTheta)
+		{ // theta is between [0, Pi] 
+
+			G4double dPhi = PHI_DIST_FACTOR * 2 * std::asin(SMALL_OBJ_MAXR / (dist * std::sin(theta))); /* Phi distance between adjacent spheres */
+
+			for (G4double phi = dPhi; 2 * phi + dPhi < M_PI; phi += dPhi ) // phi is between [0, Pi/2]
+				if (density == 1.0 || uniformRand() <= density)
+				{
+					const G4ThreeVector trans = G4ThreeVector_create(
+						dist * std::sin(theta) * std::cos(phi),
+						dist * std::sin(theta) * std::sin(phi),
+						dist * std::cos(theta) );
+					
+					G4LogicalVolume* logicSmallT = reserveThing<G4LogicalVolume>();
+					G4VPhysicalVolume *physiSmallT = reserveThing<G4VPhysicalVolume>();
+					
+					G4VSolid *smallSolid = NULL;
+					ESolid ty;
+					
+					{
+					G4double s = uniformRand();
+					
+					std::map< ESolid, G4double >::const_iterator itr
+						= distribution.begin();
+						
+					while( itr != distribution.end() && s > itr->second )
+						s -= (*itr++).second;
+						
+					ty = itr->first;
+					
+					switch( ty )
+					{
+					case kOrb:
+					{
+						G4Orb* smallSphere = reserveThing<G4Orb>();
+						smallSolid = (G4VSolid*)smallSphere;
+						G4Orb_ctor(smallSphere, SMALL_OBJ_MAXR);
+					}
+					break;
+					
+#ifdef ENABLE_G4TUBS
+					case kTubs:
+					{
+						G4Tubs* smallT = reserveThing<G4Tubs>();
+						smallSolid = (G4VSolid*)smallT;
+						
+						const G4double h = isqrt2*SMALL_OBJ_MAXR;
+						const G4double outerR = h*uniformRand();
+						const G4double innerR = outerR / 2;
+						G4double angS = 0;
+						G4double angD = 2.0*M_PI;
+						
+						if (sliced)
+						{
+							angS = uniformRand()*2.0*M_PI;
+							angD = uniformRand()*2.0*M_PI;
+						}
+						
+						G4Tubs_ctor( smallT, innerR, outerR, h, angS, angD );
+					}
+					break;
+#endif
+					
+#ifdef ENABLE_G4CONS
+					case kCons:
+					{
+						G4Cons* smallT = reserveThing<G4Cons>();
+						smallSolid = (G4VSolid*)smallT;
+						
+						const G4double h = isqrt2*SMALL_OBJ_MAXR;
+						const G4double outerR1 = h*uniformRand();
+						const G4double innerR1 = outerR1 / 2;
+						const G4double outerR2 = outerR1/2;
+						const G4double innerR2 = innerR1/2;
+						G4double angS = 0;
+						G4double angD = 2.0*M_PI;
+						
+						if (sliced)
+						{
+							angS = uniformRand()*2.0*M_PI;
+							angD = uniformRand()*2.0*M_PI;
+						}
+						
+						G4Cons_ctor( smallT, innerR1, outerR1, innerR2, outerR2, h, angS, angD );
+					}
+					break;
+#endif
+				
+#ifdef ENABLE_G4BOX
+					case kBox:
+					{
+						G4Box* smallB = reserveThing<G4Box>();
+						smallSolid = (G4VSolid*)smallB;
+						
+						const G4double x = isqrt2*SMALL_OBJ_MAXR;
+						const G4double y = x*uniformRand();
+						const G4double z = x*uniformRand();
+						
+						G4Box_ctor( smallB, x, y, z );
+					}
+					break;
+#endif
+					
+					default:
+						throw std::runtime_error( "Unsupported solid type" );
+					}
+					
+					assert( smallSolid != NULL );
+					}
+					
+					G4RotationMatrix rot = idRot;
+					if ( rotated ) rot = randomRot();
+					
+					G4LogicalVolume_ctor( logicSmallT, smallSolid, objmaterial );
+					G4VPhysicalVolume_ctor( physiSmallT, rot, trans, logicSmallT );
+					G4VPhysicalVolume_SetMotherLogical( physiSmallT, motherLogical );
+					
+					addLogicalVolumePointers( logicSmallT );
+					addPhysicalVolumePointers( physiSmallT );
+					physList.push_back( physiSmallT );
+
+					//if (physiSmallSphere->CheckOverlaps()) br++;
+					cnt++; 
+				}
+		}
+
+		return cnt;
+	}
+	
+	// adapted from original code
+	
+	int addSmallSpheres(
+		G4double dist, G4double density, G4LogicalVolume* motherLogical,
+		std::vector<G4VPhysicalVolume*>& physList )
+	{
+		const G4RotationMatrix idRot = G4RotationMatrix_create_id();
+		const G4double SMALL_SPHERE_R = smallObjRad; /* Radius of the samll spheres */
+		
+		/* Define the distance between the small spheres */
+		const G4double THETA_DIST_FACTOR = 3.;
+		const G4double PHI_DIST_FACTOR = 1.;
+		
+		/* Theta distance between adjacent spheres */
+		const G4double dTheta = THETA_DIST_FACTOR * 2 * std::asin(SMALL_SPHERE_R / dist); 
+
+		int cnt = 0;
+		
+		for (G4double theta = dTheta; theta + dTheta < M_PI; theta += dTheta)
+		{ // theta is between [0, Pi] 
+
+			G4double dPhi = PHI_DIST_FACTOR * 2 * std::asin(SMALL_SPHERE_R / (dist * std::sin(theta))); /* Phi distance between adjacent spheres */
+
+			for (G4double phi = dPhi; 2 * phi + dPhi < M_PI; phi += dPhi ) // phi is between [0, Pi/2]
+				if (density == 1.0 || uniformRand() <= density)
+				{
+					const G4ThreeVector trans = G4ThreeVector_create(
+						dist * std::sin(theta) * std::cos(phi),
+						dist * std::sin(theta) * std::sin(phi),
+						dist * std::cos(theta) );
+					
+					G4Orb* smallSphere = reserveThing<G4Orb>();
+					G4LogicalVolume* logicSmallSphere = reserveThing<G4LogicalVolume>();
+					G4VPhysicalVolume *physiSmallSphere = reserveThing<G4VPhysicalVolume>();
+					
+					G4Orb_ctor(smallSphere, SMALL_SPHERE_R);
+					G4LogicalVolume_ctor( logicSmallSphere, (G4VSolid*)smallSphere, objmaterial );
+					G4VPhysicalVolume_ctor( physiSmallSphere, idRot, trans, logicSmallSphere );
+					G4VPhysicalVolume_SetMotherLogical( physiSmallSphere, motherLogical );
+					
+					addLogicalVolumePointers( logicSmallSphere );
+					addPhysicalVolumePointers( physiSmallSphere );
+					physList.push_back( physiSmallSphere );
+
+					//if (physiSmallSphere->CheckOverlaps()) br++;
+					cnt++; 
+				}
+		}
+
+		return cnt;
+	}
+};
+
+#if 0 // unimplemented functionality from the original code
+
+int AddSmallCons(G4double dist, G4double density, G4LogicalVolume* motherLogical, int level) {
+	G4double dTheta = THETA_DIST_FACTOR * 2 * asin(SMALL_CONS_R / dist) * mm; /* Theta distance between adjacent cons */
+
+		const G4double SMALL_CONS_R   = 25; /* Radius of the samll cons */
+		
+	int cnt = 0;
+	for(G4double theta = dTheta; theta + dTheta < M_PI; theta += dTheta) { // theta is between [0, Pi] 
+
+		G4double dPhi = PHI_DIST_FACTOR * 2 * asin(SMALL_CONS_R / (dist * sin(theta))); /* Phi distance between adjacent spheres */
+
+		for (G4double phi = dPhi; 2 * phi + dPhi < M_PI; phi += dPhi ) // phi is between [0, Pi/2]
+			if (density == 1.0 || G4UniformRand() <= density)
+			{
+				/* Cons from the outer layers will have bigger radius */
+				G4Cons* smallCons = new G4Cons("", 0 * mm, SMALL_CONS_R * mm, 0 * mm, 0.1 * mm, 50 * level * mm, 0 * deg, 360 * deg);
+					
+				/* Calculate the new center of the cons */
+				G4ThreeVector v(dist * sin(theta) * cos(phi) * mm, dist * sin(theta) * sin(phi) * mm, dist * cos(theta) * mm);
+
+				G4RotationMatrix* rot = new G4RotationMatrix();								
+				
+			    G4double alfa = v.angle(G4ThreeVector(0, 0, 1));
+				rot->rotateY(M_PI-v.theta()/*(M_PI-alfa) * rad*/);
+				rot->rotateX(-v.phi());
+	
+				G4LogicalVolume* logicSmallCons = new G4LogicalVolume(smallCons, Air, "", 0, 0, 0);
+					
+				G4PVPlacement* physiSmallCons = new G4PVPlacement(0, v, logicSmallCons, "", motherLogical, false, 0, false);
+
+				//assert(physiSmallCons->CheckOverlaps());
+				cnt++; 
+		    }
+		}
+
+	return cnt;
+}
+#endif
+
+#endif

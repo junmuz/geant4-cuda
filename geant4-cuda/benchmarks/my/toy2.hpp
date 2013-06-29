@@ -1,0 +1,241 @@
+
+/** A simple test geometry with solids placed on a regular grid inside a box */
+
+#ifndef TOYGEOMETRY2_HPP
+#define TOYGEOMETRY2_HPP
+
+#include "../../geometry_common.hpp"
+
+class ToyGeometry2 : public BasicGeometry
+{
+public:
+	ToyGeometry2( int maxsz = 10000 * 1024 )
+	 : BasicGeometry( maxsz )
+	{
+		objtype = kOrb;
+		rotated = false;
+		fakePolycones = false;
+	}
+
+	double getScale() const
+	{
+		return 3.0;
+	}
+	
+	CameraParameters getCamera() const
+	{
+		CameraParameters p;
+		p.heading = 30;
+		p.pitch = -30; //-50;
+		p.dist = 8*0.15;
+		p.yfov = 80;
+		return p;
+	}
+
+private:
+
+	ESolid objtype;
+	G4bool rotated;
+	G4bool fakePolycones;
+
+	void create_impl()
+	{
+		printf ("Entered in toy2.hpp\n");
+		const G4double wbox_x = 3.;
+		const G4double wbox_y = 3.;
+		const G4double wbox_z = 3.;
+		const G4RotationMatrix idRot = G4RotationMatrix_create_id();
+		const G4ThreeVector zeroTrans = G4ThreeVector_create( 0,0,0 );
+		
+		const int numXdivs = 20;
+		const int numYdivs = 20;
+		const int numZdivs = 20;
+		
+		// World volume must be first
+		
+		// Allocate and construct world box
+		
+		G4VPhysicalVolume *phys_box = reserveThing<G4VPhysicalVolume>();
+		G4LogicalVolume *logical_box = reserveThing<G4LogicalVolume>();
+		G4Box *wbox = reserveThing<G4Box>();
+		StubMaterial *box_material = reserveThing<StubMaterial>();
+		
+		G4VPhysicalVolume_ctor(phys_box, idRot, zeroTrans, logical_box);
+		G4LogicalVolume_ctor(logical_box, (G4VSolid*)wbox, box_material);
+		G4Box_ctor(wbox, wbox_x, wbox_y, wbox_z);
+		box_material->property = 50.0;
+		
+		// Allocate and construct orbs
+		
+		int numObjs = numXdivs * numYdivs;
+		float orbMaxR = std::min( wbox_x / numXdivs, wbox_y / numYdivs ); // wbox_n is a half-width
+		
+		if ( objtype != kPolyCone )
+		{
+			numObjs *= numZdivs;
+			if(!fakePolycones) orbMaxR = std::min(orbMaxR, wbox_z / numZdivs); 
+		}
+		
+		// Allocate and construct "orb material"
+		StubMaterial *material = reserveThing<StubMaterial>();
+		material->property = 2000.0;	
+		
+		G4LogicalVolume *logArray = reserveNThings<G4LogicalVolume>( numObjs );
+		G4VPhysicalVolume *physArray = reserveNThings<G4VPhysicalVolume>( numObjs );
+		
+		// Construct orbs and register pointers
+		for ( int i=0; i<numObjs; ++i )
+		{
+			G4double curR = 0.9 * orbMaxR;
+			const int curx = i % numXdivs;
+			const int cury = (i / numXdivs) % numYdivs;
+			int curz;
+			
+			if ( objtype == kPolyCone )
+				curz = 0;
+			else
+				curz = (i / numXdivs / numYdivs) % numZdivs;
+			
+			G4RotationMatrix rot = idRot;
+			if ( rotated ) rot = randomRot();
+			
+			G4ThreeVector curTrans = 
+				G4ThreeVector_create(
+					2.0 * wbox_x * (( curx+0.5 ) / numXdivs - 0.5 ),
+					2.0 * wbox_y * (( cury+0.5 ) / numYdivs - 0.5 ),
+					2.0 * wbox_z * (( curz+0.5 ) / numZdivs - 0.5 ) );
+			
+			G4VSolid *solid = NULL;
+			
+			switch(objtype)
+			{
+#ifndef NO_ORB
+			case kOrb:
+				{
+					G4Orb *orb = reserveThing<G4Orb>();
+					G4Orb_ctor( orb, curR );
+					solid = (G4VSolid*)orb;
+				}
+				break;
+#endif
+				
+#ifndef ONLY_BOX_AND_ORB
+			case kTubs:
+				{
+					G4Tubs *tubs = reserveThing<G4Tubs>();
+					G4Tubs_ctor( tubs,
+						curR / std::sqrt(2.0) / 2,
+						curR / std::sqrt(2.0),
+						curR / std::sqrt(2.0), 0, 2*M_PI );
+					solid = (G4VSolid*)tubs;
+				}
+				break;
+				
+			case kCons:
+				{
+					G4double hh;
+					G4double rmin1;
+					G4double rmax1;
+					G4double rmin2;
+					G4double rmax2;
+					G4double sphi = 0;
+					G4double dphi = 2*M_PI;
+					
+					if ( fakePolycones )
+					{
+						G4double z0 = 2*wbox_z/numZdivs*(curz/2*2+curz*0.1)*0.8;
+						rmax1 = curR * (0.5 + 0.5*(curz%2)); 
+						rmin1 = curR * 0.4; 
+						G4double z1 = 2*wbox_z/numZdivs*((curz+1)/2*2+(curz+1)*0.1)*0.8;
+						rmax2 = curR * (0.5 + 0.5*((curz+1)%2));
+						rmin2 = curR * 0.4;
+						
+						hh = (z1-z0)/2;
+						
+						curTrans.z = (z1+z0)/2 + 2.0 * wbox_z * (0.5 / numZdivs - 0.5 );
+					}
+					else
+					{
+						rmin1 = curR / std::sqrt(2.0) * 0.2;
+						rmax1 = curR / std::sqrt(2.0) * 0.3;
+						rmin2 = curR / std::sqrt(2.0) * 0.5;
+						rmax2 = curR / std::sqrt(2.0);
+						hh = curR / std::sqrt(2.0);
+					}
+					
+					G4Cons *cons = reserveThing<G4Cons>();
+					G4Cons_ctor( cons, rmin1, rmax1, rmin2, rmax2, hh, sphi, dphi );
+					solid = (G4VSolid*)cons;
+				}
+				break;
+#endif
+				
+			case kBox:
+				{
+					G4Box *box = reserveThing<G4Box>();
+					G4Box_ctor( box,
+						curR / std::sqrt(2.0),
+						curR / std::sqrt(2.0),
+						curR / std::sqrt(2.0) );
+					solid = (G4VSolid*)box;
+				}
+				break;
+				
+#ifdef ENABLE_G4POLYCONE
+			case kPolyCone:
+				{
+					const int nplanes = numZdivs+1;
+
+					G4PolyCone *cons = reserveThing<G4PolyCone>();
+					G4double *zplanes = reserveNThings<G4double>(nplanes);
+					G4double *rmins = reserveNThings<G4double>(nplanes);
+					G4double *rmaxs = reserveNThings<G4double>(nplanes);
+					
+					for ( int j=0; j<nplanes; ++j )
+					{
+						zplanes[j] = 2*wbox_z/numZdivs*(j/2*2+j*0.1)*0.8;
+						rmaxs[j] = curR * (0.5 + 0.5*(j%2));
+						rmins[j] = curR * 0.4;
+					}
+					
+					const G4double dphi = twopi;
+					const G4double sphi = 0;
+					
+					G4PolyCone_ctor( cons, nplanes, zplanes, rmins, rmaxs, sphi, dphi );
+					addPolyConePointers( cons );
+					solid = (G4VSolid*)cons;
+				}
+				break;
+#endif
+				
+			default: 
+				throw std::runtime_error("Unsupported solid type");
+				break;
+			}
+			assert(solid!=NULL);
+			
+			G4LogicalVolume_ctor( logArray+i, solid, material );
+			G4VPhysicalVolume_ctor( physArray+i, rot, curTrans, logArray+i);
+			
+			G4VPhysicalVolume_SetMotherLogical( physArray+i, logical_box );
+			
+			addLogicalVolumePointers( logArray+i );
+			addPhysicalVolumePointers( physArray+i );
+		}
+		
+		
+		
+		for ( int i=0; i<numObjs; ++i )
+			addLogicalVolumeDaughter( logical_box, physArray+i );
+		
+		#ifdef ENABLE_VOXEL_NAVIGATION
+		createVoxels( logical_box );
+		#endif
+		
+		// Register world box pointers
+		addLogicalVolumePointers( logical_box );
+		addPhysicalVolumePointers( phys_box );
+	}
+};
+
+#endif
